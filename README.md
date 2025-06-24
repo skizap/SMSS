@@ -1,10 +1,37 @@
-# 🔍 Social Media Surveillance System
+# 🔍 Social Media Surveillance System (SMSS)
+
+[![GitHub Repository](https://img.shields.io/badge/GitHub-SMSS-blue?logo=github)](https://github.com/skizap/SMSS)
+[![Python](https://img.shields.io/badge/Python-3.8+-green?logo=python)](https://python.org)
+[![License](https://img.shields.io/badge/License-Educational-orange)](https://github.com/skizap/SMSS)
+[![Phase](https://img.shields.io/badge/Phase-7%20Complete-success)](https://github.com/skizap/SMSS)
+[![Stars](https://img.shields.io/github/stars/skizap/SMSS?style=social)](https://github.com/skizap/SMSS/stargazers)
+[![Forks](https://img.shields.io/github/forks/skizap/SMSS?style=social)](https://github.com/skizap/SMSS/network/members)
+[![Issues](https://img.shields.io/github/issues/skizap/SMSS)](https://github.com/skizap/SMSS/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/skizap/SMSS)](https://github.com/skizap/SMSS/commits/main)
 
 An advanced AI-powered Instagram monitoring system using browser automation for comprehensive social media surveillance with intelligent coordination and production-ready error handling.
 
+## 📑 Table of Contents
+
+- [🎯 Overview](#-overview)
+- [✨ Key Features](#-key-features)
+- [🏗️ Architecture](#️-architecture)
+- [🚀 Quick Start](#-quick-start)
+- [📝 Usage Examples](#-usage-examples)
+- [📊 Development Phases](#-development-phases)
+- [🎯 Phase 7 Integration Features](#-phase-7-integration-features)
+- [📚 Documentation](#-documentation)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [⚠️ Disclaimer](#️-disclaimer)
+
 ## 🎯 Overview
 
+**Repository**: [https://github.com/skizap/SMSS](https://github.com/skizap/SMSS)
+
 This system transforms traditional social media monitoring by using browser automation instead of API dependencies, enabling real-time surveillance through authentic browser sessions with advanced anti-detection measures, intelligent scraper coordination, and comprehensive error handling.
+
+> **⚠️ Educational Purpose**: This project is designed for educational and research purposes. Users are responsible for complying with Instagram's Terms of Service and applicable laws.
 
 ## ✨ Key Features
 
@@ -21,6 +48,8 @@ This system transforms traditional social media monitoring by using browser auto
 - **⚡ Batch Operations**: Efficient processing of multiple targets
 
 ## 🏗️ Architecture
+
+### Repository Structure
 
 ### Core Components:
 1. **Browser Engine** - Chromium automation with stealth capabilities
@@ -53,6 +82,39 @@ python launcher.py
 ```
 
 ## 🚀 Quick Start
+
+### Installation
+
+#### System Requirements
+- Python 3.8 or higher
+- Chrome/Chromium browser
+- 4GB+ RAM recommended
+- Windows, macOS, or Linux
+
+#### Installation Steps
+```bash
+# Clone the repository
+git clone https://github.com/skizap/SMSS.git
+cd SMSS
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Configure the system
+python launcher.py --info
+
+# Test the installation
+python launcher.py --test-browser
+```
+
+#### Dependencies
+The system requires the following Python packages:
+- `selenium` - Browser automation
+- `PyQt6` - GUI framework
+- `requests` - HTTP requests
+- `beautifulsoup4` - HTML parsing
+- `sqlite3` - Database (built-in)
+- `python-dotenv` - Environment configuration
 
 ### Launch Full Dashboard
 ```bash
@@ -310,7 +372,88 @@ python launcher.py --start-coordinator
 python launcher.py --coordinator-status
 ```
 
+## 📚 Documentation
+
+- **[Production Error Handling Guide](docs/production_error_handling.md)** - Comprehensive error handling documentation
+- **[API Documentation](docs/)** - Detailed API documentation for all components
+- **[Configuration Guide](config/)** - System configuration and setup instructions
+
+## 🤝 Contributing
+
+We welcome contributions to the SMSS project! Here's how to get started:
+
+### Getting Started
+1. **Star** the repository: [https://github.com/skizap/SMSS](https://github.com/skizap/SMSS) ⭐
+2. **Fork** the repository to your GitHub account
+3. **Clone** your fork locally:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/SMSS.git
+   cd SMSS
+   ```
+
+### Development Workflow
+1. Create a feature branch: `git checkout -b feature/new-feature`
+2. Make your changes and test thoroughly
+3. Commit your changes: `git commit -am 'Add new feature'`
+4. Push to your branch: `git push origin feature/new-feature`
+5. Submit a pull request to the main repository
+
+### Contribution Guidelines
+- Follow the existing code style and patterns
+- Add tests for new functionality
+- Update documentation as needed
+- Ensure all tests pass before submitting PR
+- Include clear commit messages and PR descriptions
+
+### Areas for Contribution
+- 🐛 Bug fixes and improvements
+- 📚 Documentation enhancements
+- 🧪 Additional test coverage
+- ⚡ Performance optimizations
+- 🆕 New scraper features
+- 🛡️ Security improvements
+
+## 📄 License
+
+This project is licensed for educational and research purposes. See the repository for full license details.
+
+## 🆘 Support & Issues
+
+### Getting Help
+- 📖 **Documentation**: Check the [docs/](docs/) directory for detailed guides
+- 🐛 **Bug Reports**: [Create an issue](https://github.com/skizap/SMSS/issues/new) on GitHub
+- 💡 **Feature Requests**: [Submit a feature request](https://github.com/skizap/SMSS/issues/new)
+- 💬 **Discussions**: Use [GitHub Discussions](https://github.com/skizap/SMSS/discussions) for questions
+
+### Common Issues
+- **Browser not found**: Ensure Chrome/Chromium is installed
+- **Permission errors**: Run with appropriate permissions
+- **Rate limiting**: Use the coordinator system to manage requests
+- **Authentication issues**: Check Instagram login credentials
+
+### Reporting Issues
+When reporting issues, please include:
+- Operating system and Python version
+- Full error message and stack trace
+- Steps to reproduce the issue
+- Expected vs actual behavior
+
+## ⚠️ Disclaimer
+
+This software is provided for educational and research purposes only. Users are solely responsible for:
+- Complying with Instagram's Terms of Service
+- Respecting privacy and data protection laws
+- Using the software ethically and legally
+- Any consequences arising from the use of this software
+
+The developers assume no responsibility for misuse of this software.
+
+## 🔗 Repository
+
+**GitHub**: [https://github.com/skizap/SMSS](https://github.com/skizap/SMSS)
+
 ---
 
 **Status**: Phase 7 Complete - Production-Ready Instagram Surveillance System ✅
+**Repository**: [https://github.com/skizap/SMSS](https://github.com/skizap/SMSS)
 **Features**: Complete integration with intelligent coordination and production error handling
