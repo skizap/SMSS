@@ -6,7 +6,7 @@ Provides comprehensive insights into surveillance data and trends.
 """
 
 import logging
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 from typing import Dict, List, Any, Optional
 import json
 
@@ -298,10 +298,27 @@ class AnalyticsControlWidget(QWidget):
             
     def get_current_filters(self) -> dict:
         """Get current filter settings"""
+        # Convert QDate to Python date properly
+        date_from = self.date_from.date()
+        date_to = self.date_to.date()
+
+        # Convert QDate to Python date
+        if hasattr(date_from, 'toPython'):
+            date_from = date_from.toPython()
+        else:
+            # For newer PyQt6 versions, use toPyDate()
+            date_from = date_from.toPyDate() if hasattr(date_from, 'toPyDate') else date(date_from.year(), date_from.month(), date_from.day())
+
+        if hasattr(date_to, 'toPython'):
+            date_to = date_to.toPython()
+        else:
+            # For newer PyQt6 versions, use toPyDate()
+            date_to = date_to.toPyDate() if hasattr(date_to, 'toPyDate') else date(date_to.year(), date_to.month(), date_to.day())
+
         return {
             'target_id': self.target_combo.currentData(),
-            'date_from': self.date_from.date().toPython() if hasattr(self.date_from.date(), 'toPython') else self.date_from.date(),
-            'date_to': self.date_to.date().toPython() if hasattr(self.date_to.date(), 'toPython') else self.date_to.date(),
+            'date_from': date_from,
+            'date_to': date_to,
             'metric': self.metric_combo.currentText(),
             'chart_type': self.chart_type_combo.currentText().lower().replace(' ', '_')
         }

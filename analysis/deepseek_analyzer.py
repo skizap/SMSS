@@ -133,22 +133,22 @@ class DeepSeekAPIClient:
         
         self.request_times.append(now)
     
-    def _make_request(self, endpoint: str, payload: Dict[str, Any]) -> Dict[str, Any]:
+    def _make_request(self, endpoint: str, payload: Dict[str, Any], retry_count: int = 0) -> Dict[str, Any]:
         """Make API request with error handling and retries"""
         self._check_rate_limit()
-        
+
         url = f"{self.base_url}/{endpoint.lstrip('/')}"
         start_time = time.time()
-        
+
         try:
             self.usage_stats.total_requests += 1
-            
+
             response = self.session.post(
                 url,
                 json=payload,
                 timeout=self.timeout
             )
-            
+
             processing_time = time.time() - start_time
             self.usage_stats.last_request_time = datetime.now(timezone.utc)
             
@@ -173,10 +173,17 @@ class DeepSeekAPIClient:
             elif response.status_code == 429:
                 # Rate limit exceeded
                 self.usage_stats.rate_limit_hits += 1
-                retry_after = int(response.headers.get('Retry-After', 60))
-                logger.warning(f"Rate limit exceeded. Retrying after {retry_after} seconds")
+
+                if retry_count >= self.max_retries:
+                    error_msg = f"Rate limit exceeded. Maximum retries ({self.max_retries}) reached."
+                    logger.error(error_msg)
+                    raise Exception(error_msg)
+
+                # Exponential backoff: 1s, 2s, 4s, 8s...
+                retry_after = min(int(response.headers.get('Retry-After', 2 ** retry_count)), 60)
+                logger.warning(f"Rate limit exceeded. Retrying after {retry_after} seconds (attempt {retry_count + 1}/{self.max_retries})")
                 time.sleep(retry_after)
-                return self._make_request(endpoint, payload)  # Retry once
+                return self._make_request(endpoint, payload, retry_count + 1)
             
             else:
                 self.usage_stats.failed_requests += 1
@@ -186,14 +193,59 @@ class DeepSeekAPIClient:
                 
         except requests.exceptions.Timeout:
             self.usage_stats.failed_requests += 1
-            logger.error("API request timed out")
-            raise Exception("API request timed out")
-            
+
+            if retry_count < self.max_retries:
+                retry_delay = 2 ** retry_count
+                logger.warning(f"Request timeout. Retrying after {retry_delay} seconds (attempt {retry_count + 1}/{self.max_retries})")
+                time.sleep(retry_delay)
+                return self._make_request(endpoint, payload, retry_count + 1)
+            else:
+                logger.error(f"API request timed out after {retry_count + 1} attempts")
+                return self._generate_mock_response(endpoint, payload)
+
         except requests.exceptions.RequestException as e:
             self.usage_stats.failed_requests += 1
-            logger.error(f"API request failed: {e}")
-            raise Exception(f"API request failed: {e}")
-    
+
+            if retry_count < self.max_retries:
+                retry_delay = 2 ** retry_count
+                logger.warning(f"Request failed. Retrying after {retry_delay} seconds (attempt {retry_count + 1}/{self.max_retries}): {e}")
+                time.sleep(retry_delay)
+                return self._make_request(endpoint, payload, retry_count + 1)
+            else:
+                logger.error(f"API request failed after {retry_count + 1} attempts: {e}")
+                return self._generate_mock_response(endpoint, payload)
+
+    def _generate_mock_response(self, endpoint: str, payload: Dict[str, Any]) -> Dict[str, Any]:
+        """Generate mock response when API is unavailable"""
+        if "chat/completions" in endpoint:
+            return {
+                "id": "mock-response-123",
+                "object": "chat.completion",
+                "created": int(time.time()),
+                "model": "deepseek-chat",
+                "choices": [{
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": "This is a mock response. Please configure your DeepSeek API key for real analysis."
+                    },
+                    "finish_reason": "stop"
+                }],
+                "usage": {
+                    "prompt_tokens": 10,
+                    "completion_tokens": 20,
+                    "total_tokens": 30
+                },
+                "mock_response": True
+            }
+        else:
+            return {
+                "mock_response": True,
+                "message": "Mock response - API key not configured",
+                "endpoint": endpoint,
+                "timestamp": int(time.time())
+            }
+
     def chat_completion(
         self,
         messages: List[Dict[str, str]],

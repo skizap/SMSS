@@ -1,0 +1,238 @@
+2025-06-25 13:26:17,274 - core.database - INFO - Database tables created successfully
+2025-06-25 13:26:17,277 - core.database - INFO - Database indexes created successfully
+2025-06-25 13:26:17,280 - core.migration_manager - INFO - No pending migrations
+2025-06-25 13:26:17,280 - core.database - INFO - Database migrations completed successfully
+2025-06-25 13:26:17,281 - core.database - INFO - Database initialized: data/surveillance.db
+2025-06-25 13:26:17,334 - analysis.deepseek_analyzer - WARNING - DeepSeek API key not found. Analysis functions will return mock results.
+2025-06-25 13:26:17,334 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 13:26:17,335 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 13:26:17,335 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 13:26:17,336 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 13:27:59,954 - core.database - INFO - Database tables created successfully
+2025-06-25 13:27:59,957 - core.database - INFO - Database indexes created successfully
+2025-06-25 13:27:59,960 - core.migration_manager - INFO - No pending migrations
+2025-06-25 13:27:59,961 - core.database - INFO - Database migrations completed successfully
+2025-06-25 13:27:59,961 - core.database - INFO - Database initialized: data/surveillance.db
+2025-06-25 13:28:00,017 - analysis.deepseek_analyzer - WARNING - DeepSeek API key not found. Analysis functions will return mock results.
+2025-06-25 13:28:00,017 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 13:28:00,018 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 13:28:00,019 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 13:28:00,019 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 13:28:00,019 - analysis.deepseek_analyzer - WARNING - Rate limit reached. Sleeping for 60.00 seconds
+2025-06-25 13:32:02,244 - core.database - INFO - Database tables created successfully
+2025-06-25 13:32:02,249 - core.database - INFO - Database indexes created successfully
+2025-06-25 13:32:02,253 - core.migration_manager - INFO - No pending migrations
+2025-06-25 13:32:02,254 - core.database - INFO - Database migrations completed successfully
+2025-06-25 13:32:02,254 - core.database - INFO - Database initialized: data/surveillance.db
+2025-06-25 13:32:02,692 - analysis.deepseek_analyzer - WARNING - DeepSeek API key not found. Analysis functions will return mock results.
+2025-06-25 13:32:02,692 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 13:32:02,693 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 13:32:02,721 - core.data_manager - INFO - Added surveillance target: integration_test_user
+2025-06-25 13:32:02,727 - core.credentials_manager - INFO - Credentials saved successfully
+2025-06-25 13:32:02,729 - core.browser_engine - INFO - Attempting to setup Chrome driver with version: auto-detect
+2025-06-25 13:32:04,475 - undetected_chromedriver.patcher - INFO - patching driver executable C:\Users\atome808\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-06-25 13:32:05,131 - core.database - INFO - Database tables created successfully
+2025-06-25 13:32:05,133 - core.database - INFO - Database indexes created successfully
+2025-06-25 13:32:05,137 - core.migration_manager - INFO - No pending migrations
+2025-06-25 13:32:05,137 - core.database - INFO - Database migrations completed successfully
+2025-06-25 13:32:05,137 - core.database - INFO - Database initialized: data/surveillance.db
+2025-06-25 13:32:05,549 - analysis.deepseek_analyzer - WARNING - DeepSeek API key not found. Analysis functions will return mock results.
+2025-06-25 13:32:05,550 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 13:32:05,550 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 13:32:06,304 - core.browser_engine - WARNING - Chrome version None failed: Message: session not created: cannot connect to chrome at 127.0.0.1:64868
+from session not created: This version of ChromeDriver only supports Chrome version 138
+Current browser version is 137.0.7151.120
+Stacktrace:
+	GetHandleVerifier [0x0x6b4493+62419]
+	GetHandleVerifier [0x0x6b44d4+62484]
+	(No symbol) [0x0x4f2133]
+	(No symbol) [0x0x52bfab]
+	(No symbol) [0x0x52afc9]
+	(No symbol) [0x0x52132f]
+	(No symbol) [0x0x521166]
+	(No symbol) [0x0x56af3e]
+	(No symbol) [0x0x56a82a]
+	(No symbol) [0x0x55f266]
+	(No symbol) [0x0x52e852]
+	(No symbol) [0x0x52f6f4]
+	GetHandleVerifier [0x0x924773+2619059]
+	GetHandleVerifier [0x0x91fb8a+2599626]
+	GetHandleVerifier [0x0x6db03a+221050]
+	GetHandleVerifier [0x0x6cb2b8+156152]
+	GetHandleVerifier [0x0x6d1c6d+183213]
+	GetHandleVerifier [0x0x6bc378+94904]
+	GetHandleVerifier [0x0x6bc502+95298]
+	GetHandleVerifier [0x0x6a765a+9626]
+	BaseThreadInitThunk [0x0x76abfcc9+25]
+	RtlGetAppContainerNamedObjectPath [0x0x774b82ae+286]
+	RtlGetAppContainerNamedObjectPath [0x0x774b827e+238]
+
+2025-06-25 13:32:06,305 - core.browser_engine - INFO - Attempting to setup Chrome driver with version: 137
+2025-06-25 13:32:07,801 - undetected_chromedriver.patcher - INFO - patching driver executable C:\Users\atome808\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-06-25 13:32:08,433 - core.database - INFO - Database tables created successfully
+2025-06-25 13:32:08,435 - core.database - INFO - Database indexes created successfully
+2025-06-25 13:32:08,438 - core.migration_manager - INFO - No pending migrations
+2025-06-25 13:32:08,439 - core.database - INFO - Database migrations completed successfully
+2025-06-25 13:32:08,439 - core.database - INFO - Database initialized: data/surveillance.db
+2025-06-25 13:32:08,849 - analysis.deepseek_analyzer - WARNING - DeepSeek API key not found. Analysis functions will return mock results.
+2025-06-25 13:32:08,849 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 13:32:08,849 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 13:32:09,496 - core.browser_engine - INFO - Browser driver setup completed
+2025-06-25 13:32:10,206 - core.browser_engine - INFO - Browser closed
+2025-06-25 13:32:10,207 - analysis.deepseek_analyzer - WARNING - DeepSeek API key not found. Analysis functions will return mock results.
+2025-06-25 13:32:10,207 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 13:32:10,208 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 13:32:10,211 - uc - INFO - ensuring close
+2025-06-25 13:32:10,211 - uc - INFO - ensuring close
+2025-06-25 13:32:55,060 - core.database - INFO - Database tables created successfully
+2025-06-25 13:32:55,063 - core.database - INFO - Database indexes created successfully
+2025-06-25 13:32:55,066 - core.migration_manager - INFO - No pending migrations
+2025-06-25 13:32:55,066 - core.database - INFO - Database migrations completed successfully
+2025-06-25 13:32:55,066 - core.database - INFO - Database initialized: data/surveillance.db
+2025-06-25 13:32:55,506 - analysis.deepseek_analyzer - WARNING - DeepSeek API key not found. Analysis functions will return mock results.
+2025-06-25 13:32:55,507 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 13:32:55,507 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 13:32:55,533 - core.data_manager - WARNING - Target integration_test_user already exists
+2025-06-25 13:32:55,536 - core.credentials_manager - INFO - Credentials saved successfully
+2025-06-25 13:32:55,538 - core.browser_engine - INFO - Attempting to setup Chrome driver with version: auto-detect
+2025-06-25 13:32:56,880 - undetected_chromedriver.patcher - INFO - patching driver executable C:\Users\atome808\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-06-25 13:32:57,529 - core.database - INFO - Database tables created successfully
+2025-06-25 13:32:57,532 - core.database - INFO - Database indexes created successfully
+2025-06-25 13:32:57,535 - core.migration_manager - INFO - No pending migrations
+2025-06-25 13:32:57,536 - core.database - INFO - Database migrations completed successfully
+2025-06-25 13:32:57,536 - core.database - INFO - Database initialized: data/surveillance.db
+2025-06-25 13:32:57,953 - analysis.deepseek_analyzer - WARNING - DeepSeek API key not found. Analysis functions will return mock results.
+2025-06-25 13:32:57,954 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 13:32:57,954 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 13:32:58,734 - core.browser_engine - WARNING - Chrome version None failed: Message: session not created: cannot connect to chrome at 127.0.0.1:64948
+from session not created: This version of ChromeDriver only supports Chrome version 138
+Current browser version is 137.0.7151.120
+Stacktrace:
+	GetHandleVerifier [0x0x1014493+62419]
+	GetHandleVerifier [0x0x10144d4+62484]
+	(No symbol) [0x0xe52133]
+	(No symbol) [0x0xe8bfab]
+	(No symbol) [0x0xe8afc9]
+	(No symbol) [0x0xe8132f]
+	(No symbol) [0x0xe81166]
+	(No symbol) [0x0xecaf3e]
+	(No symbol) [0x0xeca82a]
+	(No symbol) [0x0xebf266]
+	(No symbol) [0x0xe8e852]
+	(No symbol) [0x0xe8f6f4]
+	GetHandleVerifier [0x0x1284773+2619059]
+	GetHandleVerifier [0x0x127fb8a+2599626]
+	GetHandleVerifier [0x0x103b03a+221050]
+	GetHandleVerifier [0x0x102b2b8+156152]
+	GetHandleVerifier [0x0x1031c6d+183213]
+	GetHandleVerifier [0x0x101c378+94904]
+	GetHandleVerifier [0x0x101c502+95298]
+	GetHandleVerifier [0x0x100765a+9626]
+	BaseThreadInitThunk [0x0x76abfcc9+25]
+	RtlGetAppContainerNamedObjectPath [0x0x774b82ae+286]
+	RtlGetAppContainerNamedObjectPath [0x0x774b827e+238]
+
+2025-06-25 13:32:58,735 - core.browser_engine - INFO - Attempting to setup Chrome driver with version: 137
+2025-06-25 13:33:00,220 - undetected_chromedriver.patcher - INFO - patching driver executable C:\Users\atome808\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-06-25 13:33:00,840 - core.database - INFO - Database tables created successfully
+2025-06-25 13:33:00,842 - core.database - INFO - Database indexes created successfully
+2025-06-25 13:33:00,846 - core.migration_manager - INFO - No pending migrations
+2025-06-25 13:33:00,846 - core.database - INFO - Database migrations completed successfully
+2025-06-25 13:33:00,846 - core.database - INFO - Database initialized: data/surveillance.db
+2025-06-25 13:33:01,245 - analysis.deepseek_analyzer - WARNING - DeepSeek API key not found. Analysis functions will return mock results.
+2025-06-25 13:33:01,246 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 13:33:01,246 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 13:33:01,874 - core.browser_engine - INFO - Browser driver setup completed
+2025-06-25 13:33:02,356 - core.browser_engine - INFO - Browser closed
+2025-06-25 13:33:02,357 - analysis.deepseek_analyzer - WARNING - DeepSeek API key not found. Analysis functions will return mock results.
+2025-06-25 13:33:02,358 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 13:33:02,358 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 13:33:02,361 - core.credentials_manager - INFO - Credentials saved successfully
+2025-06-25 13:33:02,364 - uc - INFO - ensuring close
+2025-06-25 13:33:02,364 - uc - INFO - ensuring close
+2025-06-25 13:34:01,903 - core.database - INFO - Database tables created successfully
+2025-06-25 13:34:01,906 - core.database - INFO - Database indexes created successfully
+2025-06-25 13:34:01,910 - core.migration_manager - INFO - No pending migrations
+2025-06-25 13:34:01,910 - core.database - INFO - Database migrations completed successfully
+2025-06-25 13:34:01,910 - core.database - INFO - Database initialized: data/surveillance.db
+2025-06-25 13:34:02,357 - analysis.deepseek_analyzer - WARNING - DeepSeek API key not found. Analysis functions will return mock results.
+2025-06-25 13:34:02,357 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 13:34:02,357 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 13:34:02,387 - core.data_manager - INFO - Added surveillance target: validation_user_0
+2025-06-25 13:34:02,391 - core.data_manager - INFO - Added surveillance target: validation_user_1
+2025-06-25 13:34:02,393 - core.data_manager - INFO - Added surveillance target: validation_user_2
+2025-06-25 13:34:02,397 - core.credentials_manager - INFO - Credentials saved successfully
+2025-06-25 13:34:02,397 - analysis.deepseek_analyzer - WARNING - DeepSeek API key not found. Analysis functions will return mock results.
+2025-06-25 13:34:02,398 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 13:34:02,398 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 13:34:02,400 - core.browser_engine - INFO - Attempting to setup Chrome driver with version: auto-detect
+2025-06-25 13:34:02,403 - undetected_chromedriver.patcher - DEBUG - getting release number from /last-known-good-versions-with-downloads.json
+2025-06-25 13:34:02,622 - undetected_chromedriver.patcher - DEBUG - downloading from https://storage.googleapis.com/chrome-for-testing-public/138.0.7204.49/win32/chromedriver-win32.zip
+2025-06-25 13:34:03,686 - undetected_chromedriver.patcher - DEBUG - unzipping C:\Users\atome808\AppData\Local\Temp\tmprihbonbj
+2025-06-25 13:34:03,801 - undetected_chromedriver.patcher - INFO - patching driver executable C:\Users\atome808\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-06-25 13:34:03,876 - undetected_chromedriver.patcher - DEBUG - found block:
+b'{window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Object = window.Object;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_adoQpoasnfa76pfcZLmcfl_Proxy = window.Proxy;window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol = window.Symbol;window.cdc_adoQpoasnfa76pfcZLmcfl_JSON = window.JSON;window.cdc_adoQpoasnfa76pfcZLmcfl_Window = window.Window;}'
+replacing with:
+b'{console.log("undetected chromedriver 1337!")}                                                                                                                                                                                                                                                                                                                                                             '
+2025-06-25 13:34:03,884 - undetected_chromedriver.patcher - DEBUG - patching took us 0.08 seconds
+2025-06-25 13:34:04,454 - core.database - INFO - Database tables created successfully
+2025-06-25 13:34:04,456 - core.database - INFO - Database indexes created successfully
+2025-06-25 13:34:04,459 - core.migration_manager - INFO - No pending migrations
+2025-06-25 13:34:04,460 - core.database - INFO - Database migrations completed successfully
+2025-06-25 13:34:04,460 - core.database - INFO - Database initialized: data/surveillance.db
+2025-06-25 13:34:04,880 - analysis.deepseek_analyzer - WARNING - DeepSeek API key not found. Analysis functions will return mock results.
+2025-06-25 13:34:04,880 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 13:34:04,880 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 13:34:05,636 - core.browser_engine - WARNING - Chrome version None failed: Message: session not created: cannot connect to chrome at 127.0.0.1:65033
+from session not created: This version of ChromeDriver only supports Chrome version 138
+Current browser version is 137.0.7151.120
+Stacktrace:
+	GetHandleVerifier [0x0x9f4493+62419]
+	GetHandleVerifier [0x0x9f44d4+62484]
+	(No symbol) [0x0x832133]
+	(No symbol) [0x0x86bfab]
+	(No symbol) [0x0x86afc9]
+	(No symbol) [0x0x86132f]
+	(No symbol) [0x0x861166]
+	(No symbol) [0x0x8aaf3e]
+	(No symbol) [0x0x8aa82a]
+	(No symbol) [0x0x89f266]
+	(No symbol) [0x0x86e852]
+	(No symbol) [0x0x86f6f4]
+	GetHandleVerifier [0x0xc64773+2619059]
+	GetHandleVerifier [0x0xc5fb8a+2599626]
+	GetHandleVerifier [0x0xa1b03a+221050]
+	GetHandleVerifier [0x0xa0b2b8+156152]
+	GetHandleVerifier [0x0xa11c6d+183213]
+	GetHandleVerifier [0x0x9fc378+94904]
+	GetHandleVerifier [0x0x9fc502+95298]
+	GetHandleVerifier [0x0x9e765a+9626]
+	BaseThreadInitThunk [0x0x76abfcc9+25]
+	RtlGetAppContainerNamedObjectPath [0x0x774b82ae+286]
+	RtlGetAppContainerNamedObjectPath [0x0x774b827e+238]
+
+2025-06-25 13:34:05,638 - core.browser_engine - INFO - Attempting to setup Chrome driver with version: 137
+2025-06-25 13:34:05,640 - undetected_chromedriver.patcher - DEBUG - getting release number from /latest-versions-per-milestone-with-downloads.json
+2025-06-25 13:34:05,914 - undetected_chromedriver.patcher - DEBUG - downloading from https://storage.googleapis.com/chrome-for-testing-public/137.0.7151.119/win32/chromedriver-win32.zip
+2025-06-25 13:34:06,981 - undetected_chromedriver.patcher - DEBUG - unzipping C:\Users\atome808\AppData\Local\Temp\tmph8bbrql5
+2025-06-25 13:34:07,095 - undetected_chromedriver.patcher - INFO - patching driver executable C:\Users\atome808\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-06-25 13:34:07,166 - undetected_chromedriver.patcher - DEBUG - found block:
+b'{window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Object = window.Object;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_adoQpoasnfa76pfcZLmcfl_Proxy = window.Proxy;window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol = window.Symbol;window.cdc_adoQpoasnfa76pfcZLmcfl_JSON = window.JSON;window.cdc_adoQpoasnfa76pfcZLmcfl_Window = window.Window;}'
+replacing with:
+b'{console.log("undetected chromedriver 1337!")}                                                                                                                                                                                                                                                                                                                                                             '
+2025-06-25 13:34:07,173 - undetected_chromedriver.patcher - DEBUG - patching took us 0.08 seconds
+2025-06-25 13:34:07,715 - core.database - INFO - Database tables created successfully
+2025-06-25 13:34:07,717 - core.database - INFO - Database indexes created successfully
+2025-06-25 13:34:07,721 - core.migration_manager - INFO - No pending migrations
+2025-06-25 13:34:07,721 - core.database - INFO - Database migrations completed successfully
+2025-06-25 13:34:07,722 - core.database - INFO - Database initialized: data/surveillance.db
+2025-06-25 13:34:08,122 - analysis.deepseek_analyzer - WARNING - DeepSeek API key not found. Analysis functions will return mock results.
+2025-06-25 13:34:08,123 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 13:34:08,123 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 13:34:08,751 - core.browser_engine - INFO - Browser driver setup completed
+2025-06-25 13:34:08,891 - core.browser_engine - INFO - Browser closed
+2025-06-25 13:34:08,895 - core.credentials_manager - INFO - Credentials saved successfully
+2025-06-25 13:34:08,896 - uc - INFO - ensuring close
+2025-06-25 13:34:08,896 - uc - INFO - ensuring close
+2025-06-25 13:34:08,897 - undetected_chromedriver.dprocess - DEBUG - cleaning up pid 7072 
+2025-06-25 13:34:08,897 - undetected_chromedriver.dprocess - DEBUG - cleaning up pid 8404 

@@ -103,24 +103,44 @@ class RealTimeDataCollector(QThread):
     def check_target_updates(self, target):
         """Check for updates for a specific target"""
         try:
-            target_id = target.id
+            # Handle both dictionary and object formats for backward compatibility
+            if isinstance(target, dict):
+                target_id = target['id']
+                target_username = target['instagram_username']
+            else:
+                target_id = target.id
+                target_username = target.instagram_username
+
             current_time = datetime.now()
             last_check = self.last_check_times.get(target_id, current_time - timedelta(hours=1))
-            
+
             # Check for new posts
             new_posts = self.data_manager.get_posts_since(target_id, last_check)
             for post in new_posts:
-                update_data = UpdateData(
-                    update_type=UpdateType.NEW_POST,
-                    target_id=target_id,
-                    data={
+                # Handle post data (could be dict or object)
+                if isinstance(post, dict):
+                    post_data = {
+                        'post_id': post['id'],
+                        'instagram_post_id': post['instagram_post_id'],
+                        'post_type': post['post_type'],
+                        'caption': post['caption'][:100] + '...' if len(post.get('caption', '') or '') > 100 else post.get('caption'),
+                        'like_count': post['like_count'],
+                        'target_username': target_username
+                    }
+                else:
+                    post_data = {
                         'post_id': post.id,
                         'instagram_post_id': post.instagram_post_id,
                         'post_type': post.post_type,
                         'caption': post.caption[:100] + '...' if len(post.caption or '') > 100 else post.caption,
                         'like_count': post.like_count,
-                        'target_username': target.instagram_username
-                    },
+                        'target_username': target_username
+                    }
+
+                update_data = UpdateData(
+                    update_type=UpdateType.NEW_POST,
+                    target_id=target_id,
+                    data=post_data,
                     timestamp=current_time,
                     priority=2
                 )
@@ -136,26 +156,46 @@ class RealTimeDataCollector(QThread):
             self.last_check_times[target_id] = current_time
             
         except Exception as e:
-            logger.error(f"Error checking target {target.id} updates: {e}")
+            target_id = target['id'] if isinstance(target, dict) else target.id
+            logger.error(f"Error checking target {target_id} updates: {e}")
             
     def check_follower_changes(self, target, last_check: datetime, current_time: datetime):
         """Check for follower changes"""
         try:
+            # Handle both dictionary and object formats
+            if isinstance(target, dict):
+                target_id = target['id']
+                target_username = target['instagram_username']
+            else:
+                target_id = target.id
+                target_username = target.instagram_username
+
             # Get recent follower changes
-            new_followers = self.data_manager.get_new_followers_since(target.id, last_check)
-            lost_followers = self.data_manager.get_lost_followers_since(target.id, last_check)
-            
+            new_followers = self.data_manager.get_new_followers_since(target_id, last_check)
+            lost_followers = self.data_manager.get_lost_followers_since(target_id, last_check)
+
             # Emit new follower updates
             for follower in new_followers:
-                update_data = UpdateData(
-                    update_type=UpdateType.NEW_FOLLOWER,
-                    target_id=target.id,
-                    data={
+                # Handle follower data (could be dict or object)
+                if isinstance(follower, dict):
+                    follower_data = {
+                        'follower_username': follower['follower_username'],
+                        'follower_display_name': follower.get('follower_display_name'),
+                        'is_verified': follower.get('is_verified', False),
+                        'target_username': target_username
+                    }
+                else:
+                    follower_data = {
                         'follower_username': follower.follower_username,
                         'follower_display_name': follower.follower_display_name,
                         'is_verified': follower.is_verified,
-                        'target_username': target.instagram_username
-                    },
+                        'target_username': target_username
+                    }
+
+                update_data = UpdateData(
+                    update_type=UpdateType.NEW_FOLLOWER,
+                    target_id=target_id,
+                    data=follower_data,
                     timestamp=current_time,
                     priority=1
                 )
