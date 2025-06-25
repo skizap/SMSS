@@ -39,6 +39,7 @@ class SurveillanceTarget(Base):
     category = Column(String(100))  # influencer, brand, competitor, etc.
     priority = Column(String(20), default='medium')  # low, medium, high, critical
     notes = Column(Text)
+    notifications_enabled = Column(Boolean, default=True)  # Enable/disable notifications for this target
     
     # Relationships
     posts = relationship("Post", back_populates="target", cascade="all, delete-orphan")

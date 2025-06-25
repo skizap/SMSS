@@ -23,6 +23,7 @@ from sqlalchemy.orm import Session
 
 from core.config import config
 from core.database import db_manager
+from core.credentials_manager import get_credentials_manager
 from models.instagram_models import SurveillanceTarget, Post, Follower, Story, ChangeLog
 
 # Configure logging
@@ -84,10 +85,17 @@ class DeepSeekAPIClient:
     """
     
     def __init__(self, api_key: Optional[str] = None):
-        self.api_key = api_key or config.deepseek.api_key
+        # Try to get API key from multiple sources
+        if api_key:
+            self.api_key = api_key
+        else:
+            # Try credentials manager first, then config
+            credentials_manager = get_credentials_manager()
+            self.api_key = credentials_manager.get_deepseek_api_key() or config.deepseek.api_key
+
         self.base_url = config.deepseek.base_url
         self.timeout = config.deepseek.timeout
-        
+
         if not self.api_key:
             logger.warning("DeepSeek API key not found. Analysis functions will return mock results.")
         
@@ -100,9 +108,10 @@ class DeepSeekAPIClient:
         })
         
         # Rate limiting
-        self.requests_per_minute = 60
+        self.requests_per_minute = 20  # Reduced to be more conservative
         self.request_times = []
-        
+        self.max_retries = 3  # Maximum number of retries for rate limiting
+
         # Usage statistics
         self.usage_stats = APIUsageStats()
         

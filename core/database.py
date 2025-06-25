@@ -23,7 +23,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship, Session, scoped_session
 from sqlalchemy.pool import StaticPool
 from sqlalchemy.exc import SQLAlchemyError, IntegrityError
-from sqlalchemy.sql import func
+from sqlalchemy.sql import func, text
 
 from .config import config
 
@@ -101,9 +101,12 @@ class DatabaseManager:
             
             # Create indexes for performance
             self._create_indexes()
-            
+
+            # Run database migrations
+            self._run_migrations()
+
             logger.info(f"Database initialized: {self.db_path}")
-            
+
         except Exception as e:
             logger.error(f"Error setting up database: {e}")
             raise
@@ -162,7 +165,23 @@ class DatabaseManager:
 
         except Exception as e:
             logger.error(f"Error creating indexes: {e}")
-            
+
+    def _run_migrations(self):
+        """Run pending database migrations"""
+        try:
+            from .migration_manager import get_migration_manager
+
+            migration_manager = get_migration_manager(self.db_path)
+            success = migration_manager.run_pending_migrations()
+
+            if success:
+                logger.info("Database migrations completed successfully")
+            else:
+                logger.warning("Some database migrations failed")
+
+        except Exception as e:
+            logger.error(f"Error running migrations: {e}")
+
     @contextmanager
     def get_session(self) -> Session:
         """Get database session with automatic cleanup"""

@@ -28,19 +28,19 @@ class DataManager:
         self.version_manager = version_manager
         
     # Surveillance Target Operations
-    def add_surveillance_target(self, username: str, **kwargs) -> Optional[SurveillanceTarget]:
-        """Add a new surveillance target"""
+    def add_surveillance_target(self, username: str, **kwargs) -> Optional[Dict[str, Any]]:
+        """Add a new surveillance target and return as dictionary to avoid session binding issues"""
         try:
             with self.db_manager.get_session() as session:
                 # Check if target already exists
                 existing = session.query(SurveillanceTarget).filter(
                     SurveillanceTarget.instagram_username == username.lower()
                 ).first()
-                
+
                 if existing:
                     logger.warning(f"Target {username} already exists")
-                    return existing
-                
+                    return self._target_to_dict(existing)
+
                 # Create new target
                 target = create_surveillance_target(username, **kwargs)
                 session.add(target)
@@ -51,12 +51,12 @@ class DataManager:
                     target.id, 'target_added', None, username, session
                 )
 
-                # Refresh to get updated data
-                session.refresh(target)
+                # Convert to dict before returning to avoid session binding issues
+                target_dict = self._target_to_dict(target)
 
                 logger.info(f"Added surveillance target: {username}")
-                return target
-                
+                return target_dict
+
         except Exception as e:
             logger.error(f"Error adding surveillance target {username}: {e}")
             return None
@@ -578,13 +578,16 @@ class DataManager:
         target = self.add_surveillance_target(instagram_username, **kwargs)
         return target.id if target else None
 
-    def get_active_targets(self) -> List[SurveillanceTarget]:
-        """Get all active surveillance targets"""
+    def get_active_targets(self) -> List[Dict[str, Any]]:
+        """Get all active surveillance targets as dictionaries to avoid session binding issues"""
         try:
             with self.db_manager.get_session() as session:
-                return session.query(SurveillanceTarget).filter(
+                targets = session.query(SurveillanceTarget).filter(
                     SurveillanceTarget.status == 'active'
                 ).all()
+
+                # Convert to dictionaries to avoid session binding issues
+                return [self._target_to_dict(target) for target in targets]
         except Exception as e:
             logger.error(f"Error getting active targets: {e}")
             return []
@@ -628,14 +631,38 @@ class DataManager:
                 'alerts_today': 0
             }
 
-    def get_all_targets(self) -> List[SurveillanceTarget]:
-        """Get all surveillance targets"""
+    def get_all_targets(self) -> List[Dict[str, Any]]:
+        """Get all surveillance targets as dictionaries to avoid session binding issues"""
         try:
             with self.db_manager.get_session() as session:
-                return session.query(SurveillanceTarget).all()
+                targets = session.query(SurveillanceTarget).all()
+                return [self._target_to_dict(target) for target in targets]
         except Exception as e:
             logger.error(f"Error getting all targets: {e}")
             return []
+
+    def _target_to_dict(self, target: SurveillanceTarget) -> Dict[str, Any]:
+        """Convert SurveillanceTarget object to dictionary"""
+        return {
+            'id': target.id,
+            'instagram_username': target.instagram_username,
+            'display_name': target.display_name,
+            'profile_pic_url': target.profile_pic_url,
+            'is_private': target.is_private,
+            'follower_count': target.follower_count,
+            'following_count': target.following_count,
+            'post_count': target.post_count,
+            'bio': target.bio,
+            'external_url': target.external_url,
+            'is_verified': target.is_verified,
+            'created_at': target.created_at,
+            'last_updated': target.last_updated,
+            'status': target.status,
+            'category': target.category,
+            'priority': target.priority,
+            'notes': target.notes,
+            'notifications_enabled': getattr(target, 'notifications_enabled', True)
+        }
 
     def get_recent_activities(self, limit: int = 50) -> List[ChangeLog]:
         """Get recent activity/change log entries"""

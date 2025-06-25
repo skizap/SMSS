@@ -28,6 +28,7 @@ from selenium.common.exceptions import (
 from fake_useragent import UserAgent
 
 from .config import config
+from .credentials_manager import get_credentials_manager
 
 logger = logging.getLogger(__name__)
 
@@ -213,12 +214,42 @@ class InstagramBrowser:
     def setup_driver(self) -> bool:
         """Setup Chrome driver with stealth configuration"""
         try:
-            # Create driver with minimal options first
-            self.driver = uc.Chrome(
-                headless=config.browser.headless,
-                use_subprocess=False,
-                version_main=None  # Let it auto-detect
-            )
+            # Try different Chrome versions to find compatible one
+            chrome_versions = [None, 137, 136, 135, 134]  # None = auto-detect, then try specific versions
+
+            for version in chrome_versions:
+                try:
+                    logger.info(f"Attempting to setup Chrome driver with version: {version or 'auto-detect'}")
+
+                    # Create Chrome options for better compatibility
+                    options = uc.ChromeOptions()
+                    options.add_argument("--no-sandbox")
+                    options.add_argument("--disable-dev-shm-usage")
+                    options.add_argument("--disable-gpu")
+                    options.add_argument("--disable-extensions")
+                    options.add_argument("--disable-plugins")
+                    options.add_argument("--disable-images")
+                    options.add_argument("--disable-javascript")
+
+                    if config.browser.headless:
+                        options.add_argument("--headless=new")
+
+                    # Create driver with specific version
+                    self.driver = uc.Chrome(
+                        options=options,
+                        headless=config.browser.headless,
+                        use_subprocess=False,
+                        version_main=version
+                    )
+
+                    # If we get here, the driver was created successfully
+                    break
+
+                except Exception as version_error:
+                    logger.warning(f"Chrome version {version} failed: {version_error}")
+                    if version == chrome_versions[-1]:  # Last version attempt
+                        raise version_error
+                    continue
 
             # Additional stealth measures
             self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
@@ -376,6 +407,23 @@ class InstagramBrowser:
 
         except Exception as e:
             logger.warning(f"Error handling login challenges: {e}")
+
+    def auto_login(self) -> bool:
+        """Automatically login using stored credentials"""
+        try:
+            credentials_manager = get_credentials_manager()
+            creds = credentials_manager.get_instagram_credentials()
+
+            if not creds:
+                logger.error("No Instagram credentials found. Please configure credentials first.")
+                return False
+
+            logger.info("Attempting auto-login with stored credentials")
+            return self.login(creds['username'], creds['password'])
+
+        except Exception as e:
+            logger.error(f"Error during auto-login: {e}")
+            return False
 
     def navigate_to_profile(self, username: str) -> bool:
         """Navigate to a specific Instagram profile"""
