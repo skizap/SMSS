@@ -374,6 +374,7 @@ python launcher.py --coordinator-status
 
 ## 📚 Documentation
 
+- **[Troubleshooting Guide](TROUBLESHOOTING.md)** - Solutions for common issues and setup problems
 - **[Production Error Handling Guide](docs/production_error_handling.md)** - Comprehensive error handling documentation
 - **[API Documentation](docs/)** - Detailed API documentation for all components
 - **[Configuration Guide](config/)** - System configuration and setup instructions

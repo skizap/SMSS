@@ -569,3 +569,37 @@ WHERE surveillance_targets.instagram_username = ?
 2025-06-24 02:08:07,730 - core.database - INFO - Database indexes created successfully
 2025-06-24 02:08:07,730 - core.database - INFO - Database initialized: data/surveillance.db
 2025-06-24 02:08:07,735 - core.scraper_coordinator - INFO - Initialized browser pool with 2 instances
+2025-06-25 00:53:44,736 - core.database - INFO - Database tables created successfully
+2025-06-25 00:53:44,739 - core.database - INFO - Database indexes created successfully
+2025-06-25 00:53:44,739 - core.database - INFO - Database initialized: data/surveillance.db
+2025-06-25 00:53:44,758 - core.scraper_coordinator - INFO - Initialized browser pool with 2 instances
+2025-06-25 00:53:55,462 - undetected_chromedriver.patcher - INFO - patching driver executable C:\Users\atome808\appdata\roaming\undetected_chromedriver\undetected_chromedriver.exe
+2025-06-25 00:53:57,145 - core.browser_engine - ERROR - Error setting up browser driver: Message: session not created: cannot connect to chrome at 127.0.0.1:52878
+from session not created: This version of ChromeDriver only supports Chrome version 138
+Current browser version is 137.0.7151.120
+Stacktrace:
+	GetHandleVerifier [0x0x6d4493+62419]
+	GetHandleVerifier [0x0x6d44d4+62484]
+	(No symbol) [0x0x512133]
+	(No symbol) [0x0x54bfab]
+	(No symbol) [0x0x54afc9]
+	(No symbol) [0x0x54132f]
+	(No symbol) [0x0x541166]
+	(No symbol) [0x0x58af3e]
+	(No symbol) [0x0x58a82a]
+	(No symbol) [0x0x57f266]
+	(No symbol) [0x0x54e852]
+	(No symbol) [0x0x54f6f4]
+	GetHandleVerifier [0x0x944773+2619059]
+	GetHandleVerifier [0x0x93fb8a+2599626]
+	GetHandleVerifier [0x0x6fb03a+221050]
+	GetHandleVerifier [0x0x6eb2b8+156152]
+	GetHandleVerifier [0x0x6f1c6d+183213]
+	GetHandleVerifier [0x0x6dc378+94904]
+	GetHandleVerifier [0x0x6dc502+95298]
+	GetHandleVerifier [0x0x6c765a+9626]
+	BaseThreadInitThunk [0x0x76abfcc9+25]
+	RtlGetAppContainerNamedObjectPath [0x0x774b82ae+286]
+	RtlGetAppContainerNamedObjectPath [0x0x774b827e+238]
+
+2025-06-25 00:53:57,147 - uc - INFO - ensuring close

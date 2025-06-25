@@ -27,6 +27,70 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
+def attempt_auto_pyqt_fix():
+    """Attempt to automatically fix PyQt6 issues"""
+    try:
+        import subprocess
+        import sys
+        import os
+
+        print("🔧 Attempting automatic system fixes...")
+
+        # Fix 1: Update ChromeDriver
+        print("   🔄 Updating ChromeDriver...")
+        try:
+            subprocess.run([sys.executable, "-m", "pip", "install", "--upgrade", "undetected-chromedriver"],
+                         capture_output=True, check=False)
+            print("   ✅ ChromeDriver updated")
+        except:
+            pass
+
+        # Fix 2: Try to uninstall and reinstall PyQt6
+        print("   🔄 Fixing PyQt6...")
+        try:
+            subprocess.run([sys.executable, "-m", "pip", "uninstall", "PyQt6", "-y"],
+                         capture_output=True, check=False)
+            print("   ✅ PyQt6 uninstalled")
+        except:
+            pass
+
+        # Install PyQt6
+        result = subprocess.run([sys.executable, "-m", "pip", "install", "PyQt6"],
+                              capture_output=True, text=True)
+
+        if result.returncode == 0:
+            print("   ✅ PyQt6 reinstalled successfully")
+
+            # Test if it works now
+            try:
+                from PyQt6.QtCore import QCoreApplication
+                print("   ✅ PyQt6 import test successful")
+                return True
+            except ImportError:
+                print("   ❌ PyQt6 still not working, trying alternative fixes...")
+
+                # Try installing Visual C++ Redistributable dependencies
+                try:
+                    subprocess.run([sys.executable, "-m", "pip", "install", "pyqt6-tools"],
+                                 capture_output=True, check=False)
+                    print("   ✅ PyQt6 tools installed")
+                except:
+                    pass
+
+                # Try PyQt5 as fallback
+                result = subprocess.run([sys.executable, "-m", "pip", "install", "PyQt5"],
+                                      capture_output=True, text=True)
+                if result.returncode == 0:
+                    print("   ✅ PyQt5 installed as fallback")
+                    return False  # Don't retry with PyQt6, use CLI
+
+        print("   ❌ Automatic fix failed")
+        return False
+
+    except Exception as e:
+        print(f"   ❌ Auto-fix error: {e}")
+        return False
+
 def launch_ui_dashboard():
     """Launch the PyQt6 dashboard interface"""
     try:
@@ -108,11 +172,63 @@ def launch_ui_dashboard():
 
     except ImportError as e:
         print(f"❌ UI components not available: {e}")
-        print("   Please ensure PyQt6 is installed: pip install PyQt6")
-        return 1
+        print("\n� Attempting automatic fix...")
+
+        # Try automatic PyQt6 fix
+        if attempt_auto_pyqt_fix():
+            print("✅ Auto-fix successful! Retrying UI launch...")
+            try:
+                # Recursive call to retry the UI launch
+                return launch_ui_dashboard()
+
+            except Exception as retry_error:
+                print(f"❌ Retry failed: {retry_error}")
+                print("💡 Using command-line interface instead:")
+                return show_cli_menu()
+        else:
+            print("❌ Auto-fix failed. Using command-line interface:")
+            return show_cli_menu()
     except Exception as e:
         logger.error(f"Error launching UI dashboard: {e}")
         print(f"❌ Failed to launch dashboard: {e}")
+        return 1
+
+def show_cli_menu():
+    """Show interactive CLI menu when UI is not available"""
+    try:
+        print("\n" + "=" * 60)
+        print("🔍 SMSS Command Line Interface")
+        print("=" * 60)
+        print("\n📋 Available Operations:")
+        print("   1. Test browser engine")
+        print("   2. Show system information")
+        print("   3. Run comprehensive tests")
+        print("   4. Scrape Instagram profile")
+        print("   5. Analyze hashtag")
+        print("   6. Analyze location")
+        print("   7. Start coordinator service")
+        print("   8. Show coordinator status")
+        print("   9. Run batch operation")
+        print("   0. Exit")
+
+        print("\n💡 Quick Commands:")
+        print("   python launcher.py --help                    # Show all options")
+        print("   python launcher.py --test-browser            # Test browser")
+        print("   python launcher.py --info                    # System info")
+        print("   python launcher.py --scrape-profile USER     # Scrape profile")
+        print("   python launcher.py --scrape-hashtag TAG      # Analyze hashtag")
+        print("   python launcher.py --start-coordinator       # Start service")
+
+        print("\n🔧 To fix UI issues:")
+        print("   pip uninstall PyQt6 && pip install PyQt6")
+        print("   # Or install Visual C++ Redistributable on Windows")
+        print("   # See TROUBLESHOOTING.md for complete solutions")
+        print("   # See TROUBLESHOOTING.md for detailed solutions")
+
+        return 0
+
+    except Exception as e:
+        logger.error(f"Error showing CLI menu: {e}")
         return 1
 
 def test_browser_engine():
