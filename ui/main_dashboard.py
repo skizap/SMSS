@@ -34,6 +34,9 @@ from core.config import config
 from core.data_manager import DataManager
 from models.instagram_models import SurveillanceTarget, Post, Follower
 from analysis.deepseek_analyzer import DeepSeekAnalyzer
+from ui.surveillance_panel import SurveillancePanel
+from ui.analytics_panel import AnalyticsPanel
+from ui.settings_panel import SettingsPanel
 
 logger = logging.getLogger(__name__)
 
@@ -486,8 +489,7 @@ class AddTargetDialog(QDialog):
             target_id = data_manager.add_target(
                 instagram_username=username,
                 display_name=self.display_name_edit.text().strip() or None,
-                priority=self.priority_combo.currentText().lower(),
-                notifications_enabled=self.notifications_check.isChecked()
+                priority=self.priority_combo.currentText().lower()
             )
 
             if target_id:
@@ -676,10 +678,26 @@ class MainDashboard(QMainWindow):
 
         self.tab_widget.addTab(overview_widget, "📊 Overview")
 
-        # Placeholder tabs for other panels
-        self.tab_widget.addTab(QLabel("Surveillance panel will be implemented here"), "🔍 Surveillance")
-        self.tab_widget.addTab(QLabel("Analytics panel will be implemented here"), "📈 Analytics")
-        self.tab_widget.addTab(QLabel("Settings panel will be implemented here"), "⚙️ Settings")
+        # Add actual panel implementations
+        try:
+            # Surveillance Panel
+            self.surveillance_panel = SurveillancePanel()
+            self.tab_widget.addTab(self.surveillance_panel, "🔍 Surveillance")
+
+            # Analytics Panel
+            self.analytics_panel = AnalyticsPanel()
+            self.tab_widget.addTab(self.analytics_panel, "📈 Analytics")
+
+            # Settings Panel
+            self.settings_panel = SettingsPanel()
+            self.tab_widget.addTab(self.settings_panel, "⚙️ Settings")
+
+        except Exception as e:
+            logger.error(f"Error initializing panels: {e}")
+            # Fallback to placeholder labels if panels fail to initialize
+            self.tab_widget.addTab(QLabel(f"Surveillance panel error: {str(e)}"), "🔍 Surveillance")
+            self.tab_widget.addTab(QLabel(f"Analytics panel error: {str(e)}"), "📈 Analytics")
+            self.tab_widget.addTab(QLabel(f"Settings panel error: {str(e)}"), "⚙️ Settings")
 
     def create_stat_card(self, title: str, value: str, icon: str) -> QWidget:
         """Create a statistics card widget"""

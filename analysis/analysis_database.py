@@ -12,7 +12,7 @@ from sqlalchemy import Column, Integer, String, Text, DateTime, Float, JSON, For
 from sqlalchemy.orm import relationship, Session
 from sqlalchemy.ext.declarative import declarative_base
 
-from core.database import Base, db_manager
+from core.database import Base
 from models.instagram_models import SurveillanceTarget, Post, Follower, Story
 
 # Configure logging
@@ -195,6 +195,7 @@ class AnalysisDatabaseManager:
             ID of the saved analysis result
         """
         try:
+            from core.database import db_manager
             with db_manager.get_session() as session:
                 analysis_result = AnalysisResult(
                     target_id=target_id,

@@ -67,8 +67,8 @@ class AnalyticsService:
         # Weekly comparative analysis
         schedule.every().monday.at("03:00").do(self._run_weekly_comparative_analysis)
         
-        # Monthly comprehensive report generation
-        schedule.every().month.do(self._run_monthly_comprehensive_analysis)
+        # Monthly comprehensive report generation (first day of each month)
+        schedule.every().day.at("04:00").do(self._check_monthly_analysis)
         
         # Hourly cache cleanup
         schedule.every().hour.do(self._cleanup_cache)
@@ -533,13 +533,22 @@ class AnalyticsService:
         except Exception as e:
             logger.error(f"Error in weekly comparative analysis: {e}")
     
+    def _check_monthly_analysis(self):
+        """Check if monthly analysis should run (first day of month)"""
+        try:
+            current_date = datetime.now(timezone.utc)
+            if current_date.day == 1:  # First day of the month
+                self._run_monthly_comprehensive_analysis()
+        except Exception as e:
+            logger.error(f"Error checking monthly analysis: {e}")
+
     def _run_monthly_comprehensive_analysis(self):
         """Run monthly comprehensive analysis"""
         try:
             # Generate comprehensive reports for all targets
             # This could trigger report generation, send summary emails, etc.
             logger.info("Running monthly comprehensive analysis")
-            
+
         except Exception as e:
             logger.error(f"Error in monthly comprehensive analysis: {e}")
 

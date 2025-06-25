@@ -603,3 +603,266 @@ Stacktrace:
 	RtlGetAppContainerNamedObjectPath [0x0x774b827e+238]
 
 2025-06-25 00:53:57,147 - uc - INFO - ensuring close
+2025-06-25 01:20:46,899 - core.database - INFO - Database tables created successfully
+2025-06-25 01:20:46,901 - core.database - INFO - Database indexes created successfully
+2025-06-25 01:20:46,901 - core.database - INFO - Database initialized: data/surveillance.db
+2025-06-25 01:20:47,127 - analysis.deepseek_analyzer - WARNING - DeepSeek API key not found. Analysis functions will return mock results.
+2025-06-25 01:20:47,127 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 01:20:47,127 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 01:20:47,234 - ui.themes - INFO - Applied light theme
+2025-06-25 01:20:47,259 - ui.main_dashboard - ERROR - Error refreshing targets: 'DataManager' object has no attribute 'get_all_targets'
+2025-06-25 01:20:48,001 - ui.main_dashboard - ERROR - Error updating dashboard stats: 'DataManager' object has no attribute 'get_dashboard_stats'
+2025-06-25 01:20:48,002 - ui.realtime_updates - INFO - Real-time update manager started
+2025-06-25 01:20:48,214 - ui.realtime_updates - ERROR - Error collecting updates: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:20:48,218 - ui.realtime_updates - INFO - Real-time update status: Real-time data collector started
+2025-06-25 01:20:48,219 - ui.realtime_updates - ERROR - Real-time update error: Data collection error: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:21:18,222 - ui.realtime_updates - ERROR - Error collecting updates: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:21:18,949 - ui.main_dashboard - ERROR - Error updating dashboard stats: 'DataManager' object has no attribute 'get_dashboard_stats'
+2025-06-25 01:21:18,950 - ui.realtime_updates - ERROR - Real-time update error: Data collection error: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:21:36,115 - ui.main_dashboard - ERROR - Error adding target: 'DataManager' object has no attribute 'add_target'
+2025-06-25 01:21:40,302 - ui.main_dashboard - ERROR - Error adding target: 'DataManager' object has no attribute 'add_target'
+2025-06-25 01:23:48,531 - core.database - INFO - Database tables created successfully
+2025-06-25 01:23:48,535 - core.database - INFO - Database indexes created successfully
+2025-06-25 01:23:48,536 - core.database - INFO - Database initialized: data/surveillance.db
+2025-06-25 01:23:48,950 - analysis.deepseek_analyzer - WARNING - DeepSeek API key not found. Analysis functions will return mock results.
+2025-06-25 01:23:48,951 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 01:23:48,951 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 01:23:48,992 - ui.themes - INFO - Applied light theme
+2025-06-25 01:23:49,003 - ui.main_dashboard - ERROR - Error refreshing targets: 'DataManager' object has no attribute 'get_all_targets'
+2025-06-25 01:23:49,652 - ui.main_dashboard - ERROR - Error updating dashboard stats: 'DataManager' object has no attribute 'get_dashboard_stats'
+2025-06-25 01:23:49,654 - ui.realtime_updates - INFO - Real-time update manager started
+2025-06-25 01:23:49,849 - ui.realtime_updates - ERROR - Error collecting updates: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:23:49,851 - ui.realtime_updates - INFO - Real-time update status: Real-time data collector started
+2025-06-25 01:23:49,851 - ui.realtime_updates - ERROR - Real-time update error: Data collection error: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:38:40,210 - core.database - INFO - Database tables created successfully
+2025-06-25 01:38:40,213 - core.database - INFO - Database indexes created successfully
+2025-06-25 01:38:40,213 - core.database - INFO - Database initialized: data/surveillance.db
+2025-06-25 01:38:40,409 - analysis.deepseek_analyzer - WARNING - DeepSeek API key not found. Analysis functions will return mock results.
+2025-06-25 01:38:40,409 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 01:38:40,409 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 01:38:40,432 - ui.themes - INFO - Applied light theme
+2025-06-25 01:38:40,441 - ui.main_dashboard - ERROR - Error refreshing targets: 'DataManager' object has no attribute 'get_all_targets'
+2025-06-25 01:38:40,979 - ui.main_dashboard - ERROR - Error updating dashboard stats: 'DataManager' object has no attribute 'get_dashboard_stats'
+2025-06-25 01:38:40,980 - ui.realtime_updates - INFO - Real-time update manager started
+2025-06-25 01:38:41,123 - ui.realtime_updates - ERROR - Error collecting updates: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:38:41,125 - ui.realtime_updates - INFO - Real-time update status: Real-time data collector started
+2025-06-25 01:38:41,126 - ui.realtime_updates - ERROR - Real-time update error: Data collection error: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:38:59,665 - ui.main_dashboard - ERROR - Error refreshing targets: 'DataManager' object has no attribute 'get_all_targets'
+2025-06-25 01:39:11,139 - ui.realtime_updates - ERROR - Error collecting updates: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:39:11,948 - ui.main_dashboard - ERROR - Error updating dashboard stats: 'DataManager' object has no attribute 'get_dashboard_stats'
+2025-06-25 01:39:11,949 - ui.realtime_updates - ERROR - Real-time update error: Data collection error: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:39:39,496 - ui.main_dashboard - ERROR - Error adding target: 'DataManager' object has no attribute 'add_target'
+2025-06-25 01:39:41,140 - ui.realtime_updates - ERROR - Error collecting updates: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:39:41,955 - ui.main_dashboard - ERROR - Error updating dashboard stats: 'DataManager' object has no attribute 'get_dashboard_stats'
+2025-06-25 01:39:41,956 - ui.realtime_updates - ERROR - Real-time update error: Data collection error: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:40:11,151 - ui.realtime_updates - ERROR - Error collecting updates: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:40:11,952 - ui.main_dashboard - ERROR - Error updating dashboard stats: 'DataManager' object has no attribute 'get_dashboard_stats'
+2025-06-25 01:40:11,953 - ui.realtime_updates - ERROR - Real-time update error: Data collection error: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:40:41,162 - ui.realtime_updates - ERROR - Error collecting updates: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:40:41,963 - ui.main_dashboard - ERROR - Error updating dashboard stats: 'DataManager' object has no attribute 'get_dashboard_stats'
+2025-06-25 01:40:41,964 - ui.realtime_updates - ERROR - Real-time update error: Data collection error: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:41:11,168 - ui.realtime_updates - ERROR - Error collecting updates: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:41:11,953 - ui.main_dashboard - ERROR - Error updating dashboard stats: 'DataManager' object has no attribute 'get_dashboard_stats'
+2025-06-25 01:41:11,954 - ui.realtime_updates - ERROR - Real-time update error: Data collection error: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:41:41,174 - ui.realtime_updates - ERROR - Error collecting updates: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:41:41,960 - ui.main_dashboard - ERROR - Error updating dashboard stats: 'DataManager' object has no attribute 'get_dashboard_stats'
+2025-06-25 01:41:41,962 - ui.realtime_updates - ERROR - Real-time update error: Data collection error: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:42:11,177 - ui.realtime_updates - ERROR - Error collecting updates: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:42:11,958 - ui.main_dashboard - ERROR - Error updating dashboard stats: 'DataManager' object has no attribute 'get_dashboard_stats'
+2025-06-25 01:42:11,959 - ui.realtime_updates - ERROR - Real-time update error: Data collection error: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:42:41,186 - ui.realtime_updates - ERROR - Error collecting updates: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:42:41,954 - ui.main_dashboard - ERROR - Error updating dashboard stats: 'DataManager' object has no attribute 'get_dashboard_stats'
+2025-06-25 01:42:41,955 - ui.realtime_updates - ERROR - Real-time update error: Data collection error: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:43:11,193 - ui.realtime_updates - ERROR - Error collecting updates: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:43:11,961 - ui.main_dashboard - ERROR - Error updating dashboard stats: 'DataManager' object has no attribute 'get_dashboard_stats'
+2025-06-25 01:43:11,962 - ui.realtime_updates - ERROR - Real-time update error: Data collection error: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:43:24,053 - ui.main_dashboard - ERROR - Error refreshing targets: 'DataManager' object has no attribute 'get_all_targets'
+2025-06-25 01:43:24,054 - ui.main_dashboard - ERROR - Error updating dashboard stats: 'DataManager' object has no attribute 'get_dashboard_stats'
+2025-06-25 01:43:27,097 - ui.main_dashboard - ERROR - Error refreshing targets: 'DataManager' object has no attribute 'get_all_targets'
+2025-06-25 01:43:27,098 - ui.main_dashboard - ERROR - Error updating dashboard stats: 'DataManager' object has no attribute 'get_dashboard_stats'
+2025-06-25 01:43:41,202 - ui.realtime_updates - ERROR - Error collecting updates: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:43:41,957 - ui.main_dashboard - ERROR - Error updating dashboard stats: 'DataManager' object has no attribute 'get_dashboard_stats'
+2025-06-25 01:43:41,957 - ui.realtime_updates - ERROR - Real-time update error: Data collection error: 'DataManager' object has no attribute 'get_active_targets'
+2025-06-25 01:52:53,554 - core.database - INFO - Database tables created successfully
+2025-06-25 01:52:53,556 - core.database - INFO - Database indexes created successfully
+2025-06-25 01:52:53,556 - core.database - INFO - Database initialized: data/surveillance.db
+2025-06-25 01:52:53,750 - analysis.deepseek_analyzer - WARNING - DeepSeek API key not found. Analysis functions will return mock results.
+2025-06-25 01:52:53,750 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 01:52:53,751 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 01:53:01,074 - __main__ - ERROR - Error launching UI dashboard: Attribute name 'metadata' is reserved when using the Declarative API.
+2025-06-25 01:53:28,327 - core.database - INFO - Database tables created successfully
+2025-06-25 01:53:28,329 - core.database - INFO - Database indexes created successfully
+2025-06-25 01:53:28,329 - core.database - INFO - Database initialized: data/surveillance.db
+2025-06-25 01:53:28,548 - analysis.deepseek_analyzer - WARNING - DeepSeek API key not found. Analysis functions will return mock results.
+2025-06-25 01:53:28,548 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 01:53:28,548 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 01:53:30,374 - reporting.metrics_collector - INFO - Performance metrics collector started
+2025-06-25 01:53:30,434 - notifications.enhanced_notification_manager - INFO - Enhanced notification manager started
+2025-06-25 01:53:30,444 - reporting.account_health_monitor - INFO - Account health monitoring started
+2025-06-25 01:53:30,461 - reporting.account_health_monitor - ERROR - Error in health monitoring worker: Instance <SurveillanceTarget at 0x26fd29bdb50> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2025-06-25 01:53:30,461 - __main__ - ERROR - Error launching UI dashboard: 'Job' object has no attribute 'month'
+2025-06-25 01:54:20,168 - core.database - INFO - Database tables created successfully
+2025-06-25 01:54:20,170 - core.database - INFO - Database indexes created successfully
+2025-06-25 01:54:20,170 - core.database - INFO - Database initialized: data/surveillance.db
+2025-06-25 01:54:20,365 - analysis.deepseek_analyzer - WARNING - DeepSeek API key not found. Analysis functions will return mock results.
+2025-06-25 01:54:20,365 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 01:54:20,365 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 01:54:22,144 - reporting.metrics_collector - INFO - Performance metrics collector started
+2025-06-25 01:54:22,160 - notifications.enhanced_notification_manager - INFO - Enhanced notification manager started
+2025-06-25 01:54:22,168 - reporting.account_health_monitor - INFO - Account health monitoring started
+2025-06-25 01:54:22,187 - reporting.analytics_service - INFO - Analytics service scheduler started
+2025-06-25 01:54:22,187 - reporting.account_health_monitor - ERROR - Error in health monitoring worker: Instance <SurveillanceTarget at 0x23a08ca1790> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2025-06-25 01:54:23,151 - core.database - ERROR - Database session error: (sqlite3.OperationalError) no such table: scraping_metrics
+[SQL: SELECT scraping_metrics.id AS scraping_metrics_id, scraping_metrics.target_id AS scraping_metrics_target_id, scraping_metrics.scraper_type AS scraping_metrics_scraper_type, scraping_metrics.start_time AS scraping_metrics_start_time, scraping_metrics.end_time AS scraping_metrics_end_time, scraping_metrics.duration_seconds AS scraping_metrics_duration_seconds, scraping_metrics.items_scraped AS scraping_metrics_items_scraped, scraping_metrics.items_failed AS scraping_metrics_items_failed, scraping_metrics.success_rate AS scraping_metrics_success_rate, scraping_metrics.requests_made AS scraping_metrics_requests_made, scraping_metrics.requests_failed AS scraping_metrics_requests_failed, scraping_metrics.avg_response_time AS scraping_metrics_avg_response_time, scraping_metrics.rate_limit_hits AS scraping_metrics_rate_limit_hits, scraping_metrics.data_quality_score AS scraping_metrics_data_quality_score, scraping_metrics.validation_errors AS scraping_metrics_validation_errors, scraping_metrics.duplicate_items AS scraping_metrics_duplicate_items, scraping_metrics.status AS scraping_metrics_status, scraping_metrics.error_message AS scraping_metrics_error_message, scraping_metrics.scraper_metadata AS scraping_metrics_scraper_metadata 
+FROM scraping_metrics 
+WHERE scraping_metrics.start_time >= ? AND scraping_metrics.start_time < ?]
+[parameters: ('2025-06-25 03:00:00.000000', '2025-06-25 04:00:00.000000')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-25 01:54:23,151 - reporting.metrics_collector - ERROR - Error aggregating hourly stats: (sqlite3.OperationalError) no such table: scraping_metrics
+[SQL: SELECT scraping_metrics.id AS scraping_metrics_id, scraping_metrics.target_id AS scraping_metrics_target_id, scraping_metrics.scraper_type AS scraping_metrics_scraper_type, scraping_metrics.start_time AS scraping_metrics_start_time, scraping_metrics.end_time AS scraping_metrics_end_time, scraping_metrics.duration_seconds AS scraping_metrics_duration_seconds, scraping_metrics.items_scraped AS scraping_metrics_items_scraped, scraping_metrics.items_failed AS scraping_metrics_items_failed, scraping_metrics.success_rate AS scraping_metrics_success_rate, scraping_metrics.requests_made AS scraping_metrics_requests_made, scraping_metrics.requests_failed AS scraping_metrics_requests_failed, scraping_metrics.avg_response_time AS scraping_metrics_avg_response_time, scraping_metrics.rate_limit_hits AS scraping_metrics_rate_limit_hits, scraping_metrics.data_quality_score AS scraping_metrics_data_quality_score, scraping_metrics.validation_errors AS scraping_metrics_validation_errors, scraping_metrics.duplicate_items AS scraping_metrics_duplicate_items, scraping_metrics.status AS scraping_metrics_status, scraping_metrics.error_message AS scraping_metrics_error_message, scraping_metrics.scraper_metadata AS scraping_metrics_scraper_metadata 
+FROM scraping_metrics 
+WHERE scraping_metrics.start_time >= ? AND scraping_metrics.start_time < ?]
+[parameters: ('2025-06-25 03:00:00.000000', '2025-06-25 04:00:00.000000')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-25 01:54:54,158 - core.database - ERROR - Database session error: (sqlite3.OperationalError) no such table: scraping_metrics
+[SQL: SELECT scraping_metrics.id AS scraping_metrics_id, scraping_metrics.target_id AS scraping_metrics_target_id, scraping_metrics.scraper_type AS scraping_metrics_scraper_type, scraping_metrics.start_time AS scraping_metrics_start_time, scraping_metrics.end_time AS scraping_metrics_end_time, scraping_metrics.duration_seconds AS scraping_metrics_duration_seconds, scraping_metrics.items_scraped AS scraping_metrics_items_scraped, scraping_metrics.items_failed AS scraping_metrics_items_failed, scraping_metrics.success_rate AS scraping_metrics_success_rate, scraping_metrics.requests_made AS scraping_metrics_requests_made, scraping_metrics.requests_failed AS scraping_metrics_requests_failed, scraping_metrics.avg_response_time AS scraping_metrics_avg_response_time, scraping_metrics.rate_limit_hits AS scraping_metrics_rate_limit_hits, scraping_metrics.data_quality_score AS scraping_metrics_data_quality_score, scraping_metrics.validation_errors AS scraping_metrics_validation_errors, scraping_metrics.duplicate_items AS scraping_metrics_duplicate_items, scraping_metrics.status AS scraping_metrics_status, scraping_metrics.error_message AS scraping_metrics_error_message, scraping_metrics.scraper_metadata AS scraping_metrics_scraper_metadata 
+FROM scraping_metrics 
+WHERE scraping_metrics.start_time >= ? AND scraping_metrics.start_time < ?]
+[parameters: ('2025-06-25 03:00:00.000000', '2025-06-25 04:00:00.000000')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-25 01:54:54,159 - reporting.metrics_collector - ERROR - Error aggregating hourly stats: (sqlite3.OperationalError) no such table: scraping_metrics
+[SQL: SELECT scraping_metrics.id AS scraping_metrics_id, scraping_metrics.target_id AS scraping_metrics_target_id, scraping_metrics.scraper_type AS scraping_metrics_scraper_type, scraping_metrics.start_time AS scraping_metrics_start_time, scraping_metrics.end_time AS scraping_metrics_end_time, scraping_metrics.duration_seconds AS scraping_metrics_duration_seconds, scraping_metrics.items_scraped AS scraping_metrics_items_scraped, scraping_metrics.items_failed AS scraping_metrics_items_failed, scraping_metrics.success_rate AS scraping_metrics_success_rate, scraping_metrics.requests_made AS scraping_metrics_requests_made, scraping_metrics.requests_failed AS scraping_metrics_requests_failed, scraping_metrics.avg_response_time AS scraping_metrics_avg_response_time, scraping_metrics.rate_limit_hits AS scraping_metrics_rate_limit_hits, scraping_metrics.data_quality_score AS scraping_metrics_data_quality_score, scraping_metrics.validation_errors AS scraping_metrics_validation_errors, scraping_metrics.duplicate_items AS scraping_metrics_duplicate_items, scraping_metrics.status AS scraping_metrics_status, scraping_metrics.error_message AS scraping_metrics_error_message, scraping_metrics.scraper_metadata AS scraping_metrics_scraper_metadata 
+FROM scraping_metrics 
+WHERE scraping_metrics.start_time >= ? AND scraping_metrics.start_time < ?]
+[parameters: ('2025-06-25 03:00:00.000000', '2025-06-25 04:00:00.000000')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-25 01:55:43,468 - core.database - ERROR - Error creating tables: cannot import name 'db_manager' from partially initialized module 'core.database' (most likely due to a circular import) (C:\Users\atome808\Desktop\SMSS\core\database.py)
+2025-06-25 01:55:43,468 - core.database - ERROR - Error setting up database: cannot import name 'db_manager' from partially initialized module 'core.database' (most likely due to a circular import) (C:\Users\atome808\Desktop\SMSS\core\database.py)
+2025-06-25 01:55:48,242 - core.database - ERROR - Error creating tables: cannot import name 'db_manager' from partially initialized module 'core.database' (most likely due to a circular import) (C:\Users\atome808\Desktop\SMSS\core\database.py)
+2025-06-25 01:55:48,242 - core.database - ERROR - Error setting up database: cannot import name 'db_manager' from partially initialized module 'core.database' (most likely due to a circular import) (C:\Users\atome808\Desktop\SMSS\core\database.py)
+2025-06-25 01:55:52,955 - core.database - ERROR - Error creating tables: cannot import name 'db_manager' from partially initialized module 'core.database' (most likely due to a circular import) (C:\Users\atome808\Desktop\SMSS\core\database.py)
+2025-06-25 01:55:52,955 - core.database - ERROR - Error setting up database: cannot import name 'db_manager' from partially initialized module 'core.database' (most likely due to a circular import) (C:\Users\atome808\Desktop\SMSS\core\database.py)
+2025-06-25 01:55:57,689 - core.database - ERROR - Error creating tables: cannot import name 'db_manager' from partially initialized module 'core.database' (most likely due to a circular import) (C:\Users\atome808\Desktop\SMSS\core\database.py)
+2025-06-25 01:55:57,689 - core.database - ERROR - Error setting up database: cannot import name 'db_manager' from partially initialized module 'core.database' (most likely due to a circular import) (C:\Users\atome808\Desktop\SMSS\core\database.py)
+2025-06-25 01:56:02,427 - core.database - ERROR - Error creating tables: cannot import name 'db_manager' from partially initialized module 'core.database' (most likely due to a circular import) (C:\Users\atome808\Desktop\SMSS\core\database.py)
+2025-06-25 01:56:02,427 - core.database - ERROR - Error setting up database: cannot import name 'db_manager' from partially initialized module 'core.database' (most likely due to a circular import) (C:\Users\atome808\Desktop\SMSS\core\database.py)
+2025-06-25 01:56:07,166 - core.database - ERROR - Error creating tables: cannot import name 'db_manager' from partially initialized module 'core.database' (most likely due to a circular import) (C:\Users\atome808\Desktop\SMSS\core\database.py)
+2025-06-25 01:56:07,166 - core.database - ERROR - Error setting up database: cannot import name 'db_manager' from partially initialized module 'core.database' (most likely due to a circular import) (C:\Users\atome808\Desktop\SMSS\core\database.py)
+2025-06-25 02:37:14,271 - core.database - INFO - Database tables created successfully
+2025-06-25 02:37:14,273 - core.database - INFO - Database indexes created successfully
+2025-06-25 02:37:14,273 - core.database - INFO - Database initialized: data/surveillance.db
+2025-06-25 02:37:14,900 - analysis.deepseek_analyzer - WARNING - DeepSeek API key not found. Analysis functions will return mock results.
+2025-06-25 02:37:14,900 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 02:37:14,901 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 02:37:23,110 - reporting.metrics_collector - INFO - Performance metrics collector started
+2025-06-25 02:37:23,126 - notifications.enhanced_notification_manager - INFO - Enhanced notification manager started
+2025-06-25 02:37:23,143 - reporting.account_health_monitor - INFO - Account health monitoring started
+2025-06-25 02:37:23,155 - reporting.account_health_monitor - ERROR - Error in health monitoring worker: Instance <SurveillanceTarget at 0x23a35513ed0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2025-06-25 02:37:23,155 - reporting.analytics_service - INFO - Analytics service scheduler started
+2025-06-25 02:37:23,199 - ui.themes - INFO - Applied light theme
+2025-06-25 02:37:23,211 - ui.main_dashboard - ERROR - Error refreshing targets: Instance <SurveillanceTarget at 0x23a35585090> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2025-06-25 02:37:23,736 - ui.surveillance_panel - ERROR - Error refreshing activity: 'RecentActivityWidget' object has no attribute 'data_manager'
+2025-06-25 02:37:23,786 - ui.analytics_panel - ERROR - Error loading initial data: Instance <SurveillanceTarget at 0x23a54885b10> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2025-06-25 02:37:24,003 - core.database - ERROR - Database session error: type object 'ChangeLog' has no attribute 'timestamp'
+2025-06-25 02:37:24,003 - core.data_manager - ERROR - Error getting dashboard stats: type object 'ChangeLog' has no attribute 'timestamp'
+2025-06-25 02:37:24,004 - ui.realtime_updates - INFO - Real-time update manager started
+2025-06-25 02:37:24,370 - ui.realtime_updates - ERROR - Error collecting updates: Instance <SurveillanceTarget at 0x23a54909490> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2025-06-25 02:37:24,382 - ui.realtime_updates - INFO - Real-time update status: Real-time data collector started
+2025-06-25 02:37:24,385 - ui.realtime_updates - ERROR - Real-time update error: Data collection error: Instance <SurveillanceTarget at 0x23a54909490> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2025-06-25 02:37:49,761 - core.database - ERROR - Database session error: 'notifications_enabled' is an invalid keyword argument for SurveillanceTarget
+2025-06-25 02:37:49,762 - core.data_manager - ERROR - Error adding surveillance target spam_a_legere: 'notifications_enabled' is an invalid keyword argument for SurveillanceTarget
+2025-06-25 02:37:51,771 - core.database - ERROR - Database session error: 'notifications_enabled' is an invalid keyword argument for SurveillanceTarget
+2025-06-25 02:37:51,772 - core.data_manager - ERROR - Error adding surveillance target spam_a_legere: 'notifications_enabled' is an invalid keyword argument for SurveillanceTarget
+2025-06-25 02:37:54,388 - ui.realtime_updates - ERROR - Error collecting updates: Instance <SurveillanceTarget at 0x23a549370d0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2025-06-25 02:37:54,914 - core.database - ERROR - Database session error: type object 'ChangeLog' has no attribute 'timestamp'
+2025-06-25 02:37:54,914 - core.data_manager - ERROR - Error getting dashboard stats: type object 'ChangeLog' has no attribute 'timestamp'
+2025-06-25 02:37:54,915 - ui.realtime_updates - ERROR - Real-time update error: Data collection error: Instance <SurveillanceTarget at 0x23a549370d0> is not bound to a Session; attribute refresh operation cannot proceed (Background on this error at: https://sqlalche.me/e/20/bhk3)
+2025-06-25 02:41:12,682 - core.database - INFO - Database tables created successfully
+2025-06-25 02:41:12,684 - core.database - INFO - Database indexes created successfully
+2025-06-25 02:41:12,685 - core.database - INFO - Database initialized: data/surveillance.db
+2025-06-25 02:41:12,884 - analysis.deepseek_analyzer - WARNING - DeepSeek API key not found. Analysis functions will return mock results.
+2025-06-25 02:41:12,884 - analysis.deepseek_analyzer - INFO - DeepSeek API client initialized
+2025-06-25 02:41:12,884 - analysis.deepseek_analyzer - INFO - DeepSeek Analyzer initialized
+2025-06-25 02:41:14,775 - reporting.metrics_collector - INFO - Performance metrics collector started
+2025-06-25 02:41:14,791 - notifications.enhanced_notification_manager - INFO - Enhanced notification manager started
+2025-06-25 02:41:14,798 - reporting.account_health_monitor - INFO - Account health monitoring started
+2025-06-25 02:41:14,817 - core.database - ERROR - Database session error: (sqlite3.OperationalError) no such column: surveillance_targets.notifications_enabled
+[SQL: SELECT surveillance_targets.id AS surveillance_targets_id, surveillance_targets.instagram_username AS surveillance_targets_instagram_username, surveillance_targets.display_name AS surveillance_targets_display_name, surveillance_targets.profile_pic_url AS surveillance_targets_profile_pic_url, surveillance_targets.is_private AS surveillance_targets_is_private, surveillance_targets.follower_count AS surveillance_targets_follower_count, surveillance_targets.following_count AS surveillance_targets_following_count, surveillance_targets.post_count AS surveillance_targets_post_count, surveillance_targets.bio AS surveillance_targets_bio, surveillance_targets.external_url AS surveillance_targets_external_url, surveillance_targets.is_verified AS surveillance_targets_is_verified, surveillance_targets.created_at AS surveillance_targets_created_at, surveillance_targets.last_updated AS surveillance_targets_last_updated, surveillance_targets.status AS surveillance_targets_status, surveillance_targets.category AS surveillance_targets_category, surveillance_targets.priority AS surveillance_targets_priority, surveillance_targets.notes AS surveillance_targets_notes, surveillance_targets.notifications_enabled AS surveillance_targets_notifications_enabled 
+FROM surveillance_targets 
+WHERE surveillance_targets.status = ?]
+[parameters: ('active',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-25 02:41:14,817 - reporting.analytics_service - INFO - Analytics service scheduler started
+2025-06-25 02:41:14,818 - reporting.account_health_monitor - ERROR - Error getting active targets: (sqlite3.OperationalError) no such column: surveillance_targets.notifications_enabled
+[SQL: SELECT surveillance_targets.id AS surveillance_targets_id, surveillance_targets.instagram_username AS surveillance_targets_instagram_username, surveillance_targets.display_name AS surveillance_targets_display_name, surveillance_targets.profile_pic_url AS surveillance_targets_profile_pic_url, surveillance_targets.is_private AS surveillance_targets_is_private, surveillance_targets.follower_count AS surveillance_targets_follower_count, surveillance_targets.following_count AS surveillance_targets_following_count, surveillance_targets.post_count AS surveillance_targets_post_count, surveillance_targets.bio AS surveillance_targets_bio, surveillance_targets.external_url AS surveillance_targets_external_url, surveillance_targets.is_verified AS surveillance_targets_is_verified, surveillance_targets.created_at AS surveillance_targets_created_at, surveillance_targets.last_updated AS surveillance_targets_last_updated, surveillance_targets.status AS surveillance_targets_status, surveillance_targets.category AS surveillance_targets_category, surveillance_targets.priority AS surveillance_targets_priority, surveillance_targets.notes AS surveillance_targets_notes, surveillance_targets.notifications_enabled AS surveillance_targets_notifications_enabled 
+FROM surveillance_targets 
+WHERE surveillance_targets.status = ?]
+[parameters: ('active',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-25 02:41:14,843 - ui.themes - INFO - Applied light theme
+2025-06-25 02:41:14,855 - core.database - ERROR - Database session error: (sqlite3.OperationalError) no such column: surveillance_targets.notifications_enabled
+[SQL: SELECT surveillance_targets.id AS surveillance_targets_id, surveillance_targets.instagram_username AS surveillance_targets_instagram_username, surveillance_targets.display_name AS surveillance_targets_display_name, surveillance_targets.profile_pic_url AS surveillance_targets_profile_pic_url, surveillance_targets.is_private AS surveillance_targets_is_private, surveillance_targets.follower_count AS surveillance_targets_follower_count, surveillance_targets.following_count AS surveillance_targets_following_count, surveillance_targets.post_count AS surveillance_targets_post_count, surveillance_targets.bio AS surveillance_targets_bio, surveillance_targets.external_url AS surveillance_targets_external_url, surveillance_targets.is_verified AS surveillance_targets_is_verified, surveillance_targets.created_at AS surveillance_targets_created_at, surveillance_targets.last_updated AS surveillance_targets_last_updated, surveillance_targets.status AS surveillance_targets_status, surveillance_targets.category AS surveillance_targets_category, surveillance_targets.priority AS surveillance_targets_priority, surveillance_targets.notes AS surveillance_targets_notes, surveillance_targets.notifications_enabled AS surveillance_targets_notifications_enabled 
+FROM surveillance_targets]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-25 02:41:14,856 - core.data_manager - ERROR - Error getting all targets: (sqlite3.OperationalError) no such column: surveillance_targets.notifications_enabled
+[SQL: SELECT surveillance_targets.id AS surveillance_targets_id, surveillance_targets.instagram_username AS surveillance_targets_instagram_username, surveillance_targets.display_name AS surveillance_targets_display_name, surveillance_targets.profile_pic_url AS surveillance_targets_profile_pic_url, surveillance_targets.is_private AS surveillance_targets_is_private, surveillance_targets.follower_count AS surveillance_targets_follower_count, surveillance_targets.following_count AS surveillance_targets_following_count, surveillance_targets.post_count AS surveillance_targets_post_count, surveillance_targets.bio AS surveillance_targets_bio, surveillance_targets.external_url AS surveillance_targets_external_url, surveillance_targets.is_verified AS surveillance_targets_is_verified, surveillance_targets.created_at AS surveillance_targets_created_at, surveillance_targets.last_updated AS surveillance_targets_last_updated, surveillance_targets.status AS surveillance_targets_status, surveillance_targets.category AS surveillance_targets_category, surveillance_targets.priority AS surveillance_targets_priority, surveillance_targets.notes AS surveillance_targets_notes, surveillance_targets.notifications_enabled AS surveillance_targets_notifications_enabled 
+FROM surveillance_targets]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-25 02:41:15,356 - ui.surveillance_panel - ERROR - Error refreshing activity: 'ChangeLog' object has no attribute 'get'
+2025-06-25 02:41:15,405 - core.database - ERROR - Database session error: (sqlite3.OperationalError) no such column: surveillance_targets.notifications_enabled
+[SQL: SELECT surveillance_targets.id AS surveillance_targets_id, surveillance_targets.instagram_username AS surveillance_targets_instagram_username, surveillance_targets.display_name AS surveillance_targets_display_name, surveillance_targets.profile_pic_url AS surveillance_targets_profile_pic_url, surveillance_targets.is_private AS surveillance_targets_is_private, surveillance_targets.follower_count AS surveillance_targets_follower_count, surveillance_targets.following_count AS surveillance_targets_following_count, surveillance_targets.post_count AS surveillance_targets_post_count, surveillance_targets.bio AS surveillance_targets_bio, surveillance_targets.external_url AS surveillance_targets_external_url, surveillance_targets.is_verified AS surveillance_targets_is_verified, surveillance_targets.created_at AS surveillance_targets_created_at, surveillance_targets.last_updated AS surveillance_targets_last_updated, surveillance_targets.status AS surveillance_targets_status, surveillance_targets.category AS surveillance_targets_category, surveillance_targets.priority AS surveillance_targets_priority, surveillance_targets.notes AS surveillance_targets_notes, surveillance_targets.notifications_enabled AS surveillance_targets_notifications_enabled 
+FROM surveillance_targets]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-25 02:41:15,406 - core.data_manager - ERROR - Error getting all targets: (sqlite3.OperationalError) no such column: surveillance_targets.notifications_enabled
+[SQL: SELECT surveillance_targets.id AS surveillance_targets_id, surveillance_targets.instagram_username AS surveillance_targets_instagram_username, surveillance_targets.display_name AS surveillance_targets_display_name, surveillance_targets.profile_pic_url AS surveillance_targets_profile_pic_url, surveillance_targets.is_private AS surveillance_targets_is_private, surveillance_targets.follower_count AS surveillance_targets_follower_count, surveillance_targets.following_count AS surveillance_targets_following_count, surveillance_targets.post_count AS surveillance_targets_post_count, surveillance_targets.bio AS surveillance_targets_bio, surveillance_targets.external_url AS surveillance_targets_external_url, surveillance_targets.is_verified AS surveillance_targets_is_verified, surveillance_targets.created_at AS surveillance_targets_created_at, surveillance_targets.last_updated AS surveillance_targets_last_updated, surveillance_targets.status AS surveillance_targets_status, surveillance_targets.category AS surveillance_targets_category, surveillance_targets.priority AS surveillance_targets_priority, surveillance_targets.notes AS surveillance_targets_notes, surveillance_targets.notifications_enabled AS surveillance_targets_notifications_enabled 
+FROM surveillance_targets]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-25 02:41:15,406 - ui.analytics_panel - ERROR - Error updating analytics: combine() argument 1 must be datetime.date, not QDate
+2025-06-25 02:41:15,408 - ui.analytics_panel - ERROR - Error updating analytics: combine() argument 1 must be datetime.date, not QDate
+2025-06-25 02:41:15,409 - ui.analytics_panel - ERROR - Error updating analytics: combine() argument 1 must be datetime.date, not QDate
+2025-06-25 02:41:15,611 - core.database - ERROR - Database session error: (sqlite3.OperationalError) no such column: surveillance_targets.notifications_enabled
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT surveillance_targets.id AS surveillance_targets_id, surveillance_targets.instagram_username AS surveillance_targets_instagram_username, surveillance_targets.display_name AS surveillance_targets_display_name, surveillance_targets.profile_pic_url AS surveillance_targets_profile_pic_url, surveillance_targets.is_private AS surveillance_targets_is_private, surveillance_targets.follower_count AS surveillance_targets_follower_count, surveillance_targets.following_count AS surveillance_targets_following_count, surveillance_targets.post_count AS surveillance_targets_post_count, surveillance_targets.bio AS surveillance_targets_bio, surveillance_targets.external_url AS surveillance_targets_external_url, surveillance_targets.is_verified AS surveillance_targets_is_verified, surveillance_targets.created_at AS surveillance_targets_created_at, surveillance_targets.last_updated AS surveillance_targets_last_updated, surveillance_targets.status AS surveillance_targets_status, surveillance_targets.category AS surveillance_targets_category, surveillance_targets.priority AS surveillance_targets_priority, surveillance_targets.notes AS surveillance_targets_notes, surveillance_targets.notifications_enabled AS surveillance_targets_notifications_enabled 
+FROM surveillance_targets 
+WHERE surveillance_targets.status = ?) AS anon_1]
+[parameters: ('active',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-25 02:41:15,612 - core.data_manager - ERROR - Error getting dashboard stats: (sqlite3.OperationalError) no such column: surveillance_targets.notifications_enabled
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT surveillance_targets.id AS surveillance_targets_id, surveillance_targets.instagram_username AS surveillance_targets_instagram_username, surveillance_targets.display_name AS surveillance_targets_display_name, surveillance_targets.profile_pic_url AS surveillance_targets_profile_pic_url, surveillance_targets.is_private AS surveillance_targets_is_private, surveillance_targets.follower_count AS surveillance_targets_follower_count, surveillance_targets.following_count AS surveillance_targets_following_count, surveillance_targets.post_count AS surveillance_targets_post_count, surveillance_targets.bio AS surveillance_targets_bio, surveillance_targets.external_url AS surveillance_targets_external_url, surveillance_targets.is_verified AS surveillance_targets_is_verified, surveillance_targets.created_at AS surveillance_targets_created_at, surveillance_targets.last_updated AS surveillance_targets_last_updated, surveillance_targets.status AS surveillance_targets_status, surveillance_targets.category AS surveillance_targets_category, surveillance_targets.priority AS surveillance_targets_priority, surveillance_targets.notes AS surveillance_targets_notes, surveillance_targets.notifications_enabled AS surveillance_targets_notifications_enabled 
+FROM surveillance_targets 
+WHERE surveillance_targets.status = ?) AS anon_1]
+[parameters: ('active',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-25 02:41:15,613 - ui.realtime_updates - INFO - Real-time update manager started
+2025-06-25 02:41:15,904 - core.database - ERROR - Database session error: <sqlite3.Connection object at 0x0000028BCA92ED40> returned NULL without setting an exception
+2025-06-25 02:41:15,905 - core.data_manager - ERROR - Error getting active targets: <sqlite3.Connection object at 0x0000028BCA92ED40> returned NULL without setting an exception
+2025-06-25 02:41:15,905 - ui.realtime_updates - ERROR - Error checking system status: 'DataManager' object has no attribute 'check_connection'
+2025-06-25 02:41:15,908 - ui.realtime_updates - INFO - Real-time update status: Real-time data collector started
+2025-06-25 02:41:45,922 - core.database - ERROR - Database session error: (sqlite3.OperationalError) no such column: surveillance_targets.notifications_enabled
+[SQL: SELECT surveillance_targets.id AS surveillance_targets_id, surveillance_targets.instagram_username AS surveillance_targets_instagram_username, surveillance_targets.display_name AS surveillance_targets_display_name, surveillance_targets.profile_pic_url AS surveillance_targets_profile_pic_url, surveillance_targets.is_private AS surveillance_targets_is_private, surveillance_targets.follower_count AS surveillance_targets_follower_count, surveillance_targets.following_count AS surveillance_targets_following_count, surveillance_targets.post_count AS surveillance_targets_post_count, surveillance_targets.bio AS surveillance_targets_bio, surveillance_targets.external_url AS surveillance_targets_external_url, surveillance_targets.is_verified AS surveillance_targets_is_verified, surveillance_targets.created_at AS surveillance_targets_created_at, surveillance_targets.last_updated AS surveillance_targets_last_updated, surveillance_targets.status AS surveillance_targets_status, surveillance_targets.category AS surveillance_targets_category, surveillance_targets.priority AS surveillance_targets_priority, surveillance_targets.notes AS surveillance_targets_notes, surveillance_targets.notifications_enabled AS surveillance_targets_notifications_enabled 
+FROM surveillance_targets 
+WHERE surveillance_targets.status = ?]
+[parameters: ('active',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-25 02:41:45,922 - core.data_manager - ERROR - Error getting active targets: (sqlite3.OperationalError) no such column: surveillance_targets.notifications_enabled
+[SQL: SELECT surveillance_targets.id AS surveillance_targets_id, surveillance_targets.instagram_username AS surveillance_targets_instagram_username, surveillance_targets.display_name AS surveillance_targets_display_name, surveillance_targets.profile_pic_url AS surveillance_targets_profile_pic_url, surveillance_targets.is_private AS surveillance_targets_is_private, surveillance_targets.follower_count AS surveillance_targets_follower_count, surveillance_targets.following_count AS surveillance_targets_following_count, surveillance_targets.post_count AS surveillance_targets_post_count, surveillance_targets.bio AS surveillance_targets_bio, surveillance_targets.external_url AS surveillance_targets_external_url, surveillance_targets.is_verified AS surveillance_targets_is_verified, surveillance_targets.created_at AS surveillance_targets_created_at, surveillance_targets.last_updated AS surveillance_targets_last_updated, surveillance_targets.status AS surveillance_targets_status, surveillance_targets.category AS surveillance_targets_category, surveillance_targets.priority AS surveillance_targets_priority, surveillance_targets.notes AS surveillance_targets_notes, surveillance_targets.notifications_enabled AS surveillance_targets_notifications_enabled 
+FROM surveillance_targets 
+WHERE surveillance_targets.status = ?]
+[parameters: ('active',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-25 02:41:45,923 - ui.realtime_updates - ERROR - Error checking system status: 'DataManager' object has no attribute 'check_connection'
+2025-06-25 02:41:46,553 - core.database - ERROR - Database session error: (sqlite3.OperationalError) no such column: surveillance_targets.notifications_enabled
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT surveillance_targets.id AS surveillance_targets_id, surveillance_targets.instagram_username AS surveillance_targets_instagram_username, surveillance_targets.display_name AS surveillance_targets_display_name, surveillance_targets.profile_pic_url AS surveillance_targets_profile_pic_url, surveillance_targets.is_private AS surveillance_targets_is_private, surveillance_targets.follower_count AS surveillance_targets_follower_count, surveillance_targets.following_count AS surveillance_targets_following_count, surveillance_targets.post_count AS surveillance_targets_post_count, surveillance_targets.bio AS surveillance_targets_bio, surveillance_targets.external_url AS surveillance_targets_external_url, surveillance_targets.is_verified AS surveillance_targets_is_verified, surveillance_targets.created_at AS surveillance_targets_created_at, surveillance_targets.last_updated AS surveillance_targets_last_updated, surveillance_targets.status AS surveillance_targets_status, surveillance_targets.category AS surveillance_targets_category, surveillance_targets.priority AS surveillance_targets_priority, surveillance_targets.notes AS surveillance_targets_notes, surveillance_targets.notifications_enabled AS surveillance_targets_notifications_enabled 
+FROM surveillance_targets 
+WHERE surveillance_targets.status = ?) AS anon_1]
+[parameters: ('active',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-06-25 02:41:46,553 - core.data_manager - ERROR - Error getting dashboard stats: (sqlite3.OperationalError) no such column: surveillance_targets.notifications_enabled
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT surveillance_targets.id AS surveillance_targets_id, surveillance_targets.instagram_username AS surveillance_targets_instagram_username, surveillance_targets.display_name AS surveillance_targets_display_name, surveillance_targets.profile_pic_url AS surveillance_targets_profile_pic_url, surveillance_targets.is_private AS surveillance_targets_is_private, surveillance_targets.follower_count AS surveillance_targets_follower_count, surveillance_targets.following_count AS surveillance_targets_following_count, surveillance_targets.post_count AS surveillance_targets_post_count, surveillance_targets.bio AS surveillance_targets_bio, surveillance_targets.external_url AS surveillance_targets_external_url, surveillance_targets.is_verified AS surveillance_targets_is_verified, surveillance_targets.created_at AS surveillance_targets_created_at, surveillance_targets.last_updated AS surveillance_targets_last_updated, surveillance_targets.status AS surveillance_targets_status, surveillance_targets.category AS surveillance_targets_category, surveillance_targets.priority AS surveillance_targets_priority, surveillance_targets.notes AS surveillance_targets_notes, surveillance_targets.notifications_enabled AS surveillance_targets_notifications_enabled 
+FROM surveillance_targets 
+WHERE surveillance_targets.status = ?) AS anon_1]
+[parameters: ('active',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)

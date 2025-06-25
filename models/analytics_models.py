@@ -46,7 +46,7 @@ class ScrapingMetrics(Base):
     # Status and metadata
     status = Column(String(20), default='completed')  # running, completed, failed, cancelled
     error_message = Column(Text)
-    metadata = Column(JSON)  # Additional scraper-specific data
+    scraper_metadata = Column(JSON)  # Additional scraper-specific data
     
     # Relationships
     target = relationship("SurveillanceTarget")

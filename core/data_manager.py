@@ -572,5 +572,81 @@ class DataManager:
         """Clean up old change log entries"""
         return self.version_manager.cleanup_old_changes(days_to_keep)
 
+    # UI Compatibility Methods
+    def add_target(self, instagram_username: str, **kwargs) -> Optional[int]:
+        """Add target - UI compatibility method that returns target ID"""
+        target = self.add_surveillance_target(instagram_username, **kwargs)
+        return target.id if target else None
+
+    def get_active_targets(self) -> List[SurveillanceTarget]:
+        """Get all active surveillance targets"""
+        try:
+            with self.db_manager.get_session() as session:
+                return session.query(SurveillanceTarget).filter(
+                    SurveillanceTarget.status == 'active'
+                ).all()
+        except Exception as e:
+            logger.error(f"Error getting active targets: {e}")
+            return []
+
+    def get_dashboard_stats(self) -> Dict[str, Any]:
+        """Get dashboard statistics"""
+        try:
+            with self.db_manager.get_session() as session:
+                # Count active targets
+                active_targets = session.query(SurveillanceTarget).filter(
+                    SurveillanceTarget.status == 'active'
+                ).count()
+
+                # Count total posts
+                total_posts = session.query(Post).count()
+
+                # Count new followers (last 24 hours)
+                yesterday = datetime.now(timezone.utc) - timedelta(days=1)
+                new_followers = session.query(Follower).filter(
+                    Follower.detected_at >= yesterday
+                ).count()
+
+                # Count alerts/changes today
+                today = datetime.now(timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
+                alerts_today = session.query(ChangeLog).filter(
+                    ChangeLog.detected_at >= today
+                ).count()
+
+                return {
+                    'active_targets': active_targets,
+                    'total_posts': total_posts,
+                    'new_followers': new_followers,
+                    'alerts_today': alerts_today
+                }
+        except Exception as e:
+            logger.error(f"Error getting dashboard stats: {e}")
+            return {
+                'active_targets': 0,
+                'total_posts': 0,
+                'new_followers': 0,
+                'alerts_today': 0
+            }
+
+    def get_all_targets(self) -> List[SurveillanceTarget]:
+        """Get all surveillance targets"""
+        try:
+            with self.db_manager.get_session() as session:
+                return session.query(SurveillanceTarget).all()
+        except Exception as e:
+            logger.error(f"Error getting all targets: {e}")
+            return []
+
+    def get_recent_activities(self, limit: int = 50) -> List[ChangeLog]:
+        """Get recent activity/change log entries"""
+        try:
+            with self.db_manager.get_session() as session:
+                return session.query(ChangeLog).order_by(
+                    desc(ChangeLog.detected_at)
+                ).limit(limit).all()
+        except Exception as e:
+            logger.error(f"Error getting recent activities: {e}")
+            return []
+
 # Global data manager instance
 data_manager = DataManager()

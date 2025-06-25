@@ -16,7 +16,7 @@ from PyQt6.QtWidgets import (
     QHeaderView, QProgressBar, QGroupBox, QScrollArea, QTextEdit,
     QComboBox, QSpinBox, QCheckBox, QSlider, QTabWidget, QListWidget,
     QListWidgetItem, QMessageBox, QDialog, QLineEdit, QDateTimeEdit,
-    QFileDialog, QPasswordLineEdit, QDialogButtonBox, QPlainTextEdit
+    QFileDialog, QDialogButtonBox, QPlainTextEdit
 )
 from PyQt6.QtCore import (
     Qt, QTimer, QThread, pyqtSignal, QSize, QDateTime, QSettings

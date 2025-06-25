@@ -300,8 +300,8 @@ class AnalyticsControlWidget(QWidget):
         """Get current filter settings"""
         return {
             'target_id': self.target_combo.currentData(),
-            'date_from': self.date_from.date().toPython(),
-            'date_to': self.date_to.date().toPython(),
+            'date_from': self.date_from.date().toPython() if hasattr(self.date_from.date(), 'toPython') else self.date_from.date(),
+            'date_to': self.date_to.date().toPython() if hasattr(self.date_to.date(), 'toPython') else self.date_to.date(),
             'metric': self.metric_combo.currentText(),
             'chart_type': self.chart_type_combo.currentText().lower().replace(' ', '_')
         }

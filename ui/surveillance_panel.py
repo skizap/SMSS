@@ -173,8 +173,8 @@ class RecentActivityWidget(QWidget):
     
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.setup_ui()
         self.data_manager = DataManager()
+        self.setup_ui()
         
     def setup_ui(self):
         """Setup the recent activity UI"""

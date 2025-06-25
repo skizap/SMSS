@@ -113,6 +113,9 @@ class DatabaseManager:
         try:
             # Import models to register them with Base
             from models import instagram_models
+            from models import analytics_models
+            # Note: analysis_database import disabled due to circular import
+            # from analysis import analysis_database
 
             Base.metadata.create_all(self.engine)
             logger.info("Database tables created successfully")
